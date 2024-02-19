@@ -1,8 +1,24 @@
 .bg-light {
-    background-color: #ffffff!important;
+    background-color: #fcf6ee!important;
 }
 
-.nav-link{
-    font-family: 'Andale Mono', monospace;
+.navbar {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 25px;
 }
+
+.nav-link {
+    color: #516fad!important;
+}
+
+.nav-link:focus {
+    color: #74bec1!important;
+}
+
+header .row{
+    min-height: 30vh;
+}
+
+ body {
+    background-color: #fcf6ee;
+  }

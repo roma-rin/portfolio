@@ -16,9 +16,17 @@
 }
 
 header .row{
-    min-height: 30vh;
+    min-height: 90vh;
 }
 
- body {
-    background-color: #fcf6ee;
-  }
+body {
+   background-color: #fcf6ee;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    margin-left: 40%;
+    margin-top: 20%;
+    border-radius: 200px 200px 0px 0px;
+}

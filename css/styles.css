@@ -2,11 +2,6 @@
     background-color: #fcf6ee!important;
 }
 
-.navbar {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 25px;
-}
-
 .nav-link {
     color: #516fad!important;
 }
@@ -19,8 +14,19 @@ header .row{
     min-height: 90vh;
 }
 
+@font-face {
+    font-family: "CustomFont";
+    src: url("../font/SonderRegular.otf") format("opentype");
+}
+
 body {
    background-color: #fcf6ee;
+   font-family: 'CustomFont';
+}
+
+.navbar {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
 }
 
 img {

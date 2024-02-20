@@ -27,6 +27,15 @@ img {
     width: 50%;
     height: auto;
     margin-left: 40%;
-    margin-top: 20%;
+    margin-top: 20%; 
     border-radius: 200px 200px 0px 0px;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

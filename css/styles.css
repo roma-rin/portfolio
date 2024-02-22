@@ -1,9 +1,11 @@
+/* General styles */
+
 .bg-light {
-    background-color: #fcf6ee!important;
+    background-color: #ffffff!important;
 } 
 
 .nav-link {
-    color: #516fad!important;
+    color: #8C665E!important;
     font-weight: bold;
     font-size: 19px;
     margin-left: 50px;
@@ -11,23 +13,31 @@
 }
 
 .nav-link:focus {
-    color: #74bec1!important;
-} 
+    color: #F2CDAC!important;
+}
 
 @font-face {
-    font-family: "CustomFont";
+    font-family: "SonderFont";
     src: url("../font/SonderRegular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "GroteskFont";
+    src: url("../font/HKGrotesk-Regular.otf") format("opentype");
+}
+
 body {
-   background-color: #fcf6ee;
-   font-family: 'CustomFont';
+   background-color: #ffffff;
+   font-family: 'SonderFont';
+   color: #fb5101;
 }
 
 .navbar {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'GroteskFont';
     font-size: 15px;
 }
+
+/* Image styles */
 
 img {
     width: 50%;
@@ -37,15 +47,30 @@ img {
     border-radius: 200px 200px 0px 0px;
 }
 
-.first-title{
+/* Header styles */
+
+.first-title {
     font-size: 160px;
 }
 
 .second-title{
+    margin-top: 260px;
     font-size: 80px;
 }
 
+.description {
+    font-family: 'GroteskFont';
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 200px;
+}
+
 @media (max-width: 768px) {
+
+    body{
+        text-align: center;
+    }
+
     img {
         width: 70%;
         display: block;
@@ -53,17 +78,25 @@ img {
         margin-right: auto;
     }
 
-    .first-title {
-        font-size: 80px;
+    .first-title,
+    .second-title,
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; /* Center-align titles and description */
     }
 
+    .first-title {
+        font-size: 80px; 
+    }
     .second-title {
+        margin-top: 30px;
         font-size: 40px;
-        margin-left: 80px;
     }
 
     .description {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
     }
 } 

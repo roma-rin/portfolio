@@ -4,6 +4,10 @@
 
 .nav-link {
     color: #516fad!important;
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 50px;
+    margin-top: 15px;
 }
 
 .nav-link:focus {

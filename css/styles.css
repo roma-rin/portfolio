@@ -1,13 +1,16 @@
 /* General styles */
 
-.bg-light {
-    background-color: #ffffff!important;
+body {
+    background: linear-gradient(70deg, #F2DFCE, #faf8f6)!important;
+    background-attachment: fixed!important;
+    font-family: 'SonderFont';
+    color: #fb5101;
 }
 
 .nav-link {
     color: #8C665E!important;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 22px;
     margin-left: 50px;
     margin-top: 15px;
 }
@@ -26,15 +29,10 @@
     src: url("../font/HKGrotesk-Regular.otf") format("opentype");
 }
 
-body {
-   background-color: #ffffff;
-   font-family: 'SonderFont';
-   color: #fb5101;
-}
-
 .navbar {
     font-family: 'GroteskFont';
     font-size: 15px;
+    background-color: transparent !important;
 }
 
 /* Image styles */
@@ -60,9 +58,9 @@ img {
 
 .description {
     font-family: 'GroteskFont';
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 20px;
-    margin-right: 200px;
+    margin-right: 330px;
 }
 
 @media (max-width: 768px) {
@@ -72,7 +70,7 @@ img {
     }
 
     img {
-        width: 70%;
+        width: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;

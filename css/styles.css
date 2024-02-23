@@ -16,7 +16,7 @@ body {
 }
 
 .nav-link:focus {
-    color: #F2CDAC!important;
+    color: #d4afa7!important;
 }
 
 @font-face {
@@ -98,3 +98,32 @@ img {
         text-align: justify;
     }
 } 
+
+.timeline-text {
+    text-align: center;
+    color: white;
+    font-family: 'GroteskFont';
+    font-size: 25px;
+    margin-top: 20px;
+}  
+
+.box{ 
+    width: 800px;
+    height: 100px;
+    padding: 10px;
+    background-color: #fb5101;
+    border-radius: 50px 50px 50px 50px;
+    margin-top: 30px; 
+    margin-bottom: 20px;
+    margin-left: 800px;
+}
+
+ .box:nth-child(2) {
+    width: 600px;
+    margin-left: 300px;
+  }  
+ 
+.box:nth-child(3) {
+    margin-left: -500px!important;
+    margin-bottom: 60px;
+  }  

@@ -97,6 +97,22 @@ img {
         margin-right: 20px;
         text-align: justify;
     }
+
+    .box {
+        width: 100%!important; 
+        margin-left: auto!important; 
+        margin-right: auto!important;
+    }
+
+    .box:nth-child(2) {
+        width: 100%  !important; 
+        margin-left: auto !important; 
+    }
+
+    .box:nth-child(3) {
+        width: 100%!important; 
+        margin-left: auto!important; 
+        margin-right: auto!important; }
 } 
 
 .timeline-text {
@@ -124,6 +140,6 @@ img {
   }  
  
 .box:nth-child(3) {
-    margin-left: -500px!important;
+    margin-left: -500px;
     margin-bottom: 60px;
   }  

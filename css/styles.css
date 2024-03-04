@@ -129,17 +129,27 @@ img {
     padding: 10px;
     background-color: #fb5101;
     border-radius: 50px 50px 50px 50px;
-    margin-top: 30px; 
-    margin-bottom: 20px;
+    margin-top: 20px; 
+    margin-bottom: 10px;
     margin-left: 800px;
 }
 
- .box:nth-child(2) {
+.box:nth-child(1){
+    width: 150px;
+    margin-left: 1300px; 
+}
+
+.box:nth-child(3) {
     width: 600px;
     margin-left: 300px;
-  }  
+}  
+
+.box:nth-child(4) {
+   width: 200px;
+   margin-left: 100px;
+} 
  
-.box:nth-child(3) {
+.box:nth-child(5) {
     margin-left: -500px;
     margin-bottom: 60px;
-  }  
+}  

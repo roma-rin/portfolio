@@ -1,22 +1,8 @@
-/* General styles */
-
 body {
     background: linear-gradient(70deg, #F2DFCE, #faf8f6)!important;
     background-attachment: fixed!important;
     font-family: 'SonderFont';
     color: #fb5101;
-}
-
-.nav-link {
-    color: #8C665E!important;
-    font-weight: bold;
-    font-size: 22px;
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-.nav-link:focus {
-    color: #d4afa7!important;
 }
 
 @font-face {
@@ -29,41 +15,62 @@ body {
     src: url("../font/HKGrotesk-Regular.otf") format("opentype");
 }
 
+/* header: navbar */
 .navbar {
     font-family: 'GroteskFont';
     font-size: 15px;
     background-color: transparent !important;
+} 
+
+.nav-link {
+    color: #8C665E!important;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-/* Image styles */
+.nav-link:focus {
+    color: #d4afa7!important;
+} 
+
+/* main */
+
+#whatismyname{
+    margin: auto;
+    margin-top:70px;
+    font-size: 160px;
+    text-align: center;
+    border: solid black 1px;
+    padding:40px; 
+}
 
 img {
-    width: 50%;
-    height: auto;
-    margin-left: 40%;
-    margin-top: 20%; 
     border-radius: 200px 200px 0px 0px;
-}
+    height:80%;
+} 
 
-/* Header styles */
-
-.first-title {
-    font-size: 160px;
+#profile-picture-container{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-right: 50px;
 }
 
 .second-title{
-    margin-top: 260px;
+    text-align: justify;
+    line-height: 1;
     font-size: 80px;
+    padding-right: 20%;
 }
 
 .description {
     font-family: 'GroteskFont';
     font-size: 25px;
-    margin-top: 20px;
-    margin-right: 330px;
-}
+    text-align: justify;
+    color: #8C665E;
+    padding-right: 20%;
+} 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     body{
         text-align: center;
@@ -81,7 +88,7 @@ img {
     .description {
         margin-left: auto;
         margin-right: auto;
-        text-align: center; /* Center-align titles and description */
+        text-align: center;  Center-align titles and description 
     }
 
     .first-title {
@@ -97,9 +104,9 @@ img {
         margin-right: 20px;
         text-align: justify;
     }
-} 
+} */
 
-.timeline-text {
+/* .timeline-text {
     color: #faf8f6;
     font-family: 'GroteskFont';
     font-size: 25px;
@@ -111,5 +118,5 @@ img {
     background-color: #fb5101;
     border-radius: 50px;
 } 
-
+ */
 

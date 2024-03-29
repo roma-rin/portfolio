@@ -15,44 +15,46 @@
 
   </head>
   <body>
-    <!-- *** NavBar *** -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#top">About </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#news">News</a>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#top">About </a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+              <li class="nav-item">
+                  <a class="nav-link" href="#news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
       </nav>
+    </header>
 
-    <!-- *** Header *** -->
-      <header>
-        <div class="container" style="border: solid red 1px;">
-          <div class="row align-items-center" style="margin-top:20vh;">
-            <div class="col-12 text-center">
-              <h1 class = "first-title">I'm Rose.</h1>
-            </div>
+    <main>
+      <section>
+            <div id="whatismyname">I'm Rose.</div>
+      </section>
+
+      <section id="whoiam">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-5" style="border: solid black 1px;" id="profile-picture-container"> <img src="img/portrait.jpg"></div>
+            <div class="col-12 col-md-7" style="border: solid yellow 1px;">
+              <p class = "second-title" style="border: solid blue 1px;">A Research Scientist <br> working in Rennes, France. 
+              <p class="description" style="border: solid blue 1px;">Over the past 3+ years, I've worked at the interface between biology and informatics by conducting a research project centered on the analysis of health data in the oncology field. </p>
+              <p class="description" style="border: solid blue 1px;">These days, I've been enjoying exploring various areas of informatics, such as creating my own homemade portfolio in HTML and CSS.</p>
+            </div> 
           </div>
         </div>
-          <div class="row align-items-center" style="border: solid black 1px; margin-right: 0px; margin-bottom:10vh; margin-top: -10vh;">
-            <div class="col-12 col-md-5" style="border: solid purple 1px;"> <img src="img/portrait.jpg"></div>
-            <div class="col-12 col-md-7" style="border: solid green 1px;"><h1 class = "second-title">A Research Scientist <br> working in Rennes, France. </h1> 
-              <p class="description" style="color: #8C665E ;">Over the past 3+ years, I've worked at the interface between biology and informatics by conducting a research project centered on the analysis of health data in the oncology field. </p>
-              <p class="description" style="color: #8C665E ;">These days, I've been enjoying exploring various areas of informatics, such as creating my own homemade portfolio in HTML and CSS.</p></div>
-          </div>
-      </header>
+      </section>
 
+
+<!-- 
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-md-4 offset-md-7 mb-3">
@@ -79,8 +81,8 @@
           </div>
         </div>
         </div>
-      </div>
-
+      </div>  -->
+    </main>
 
     <!-- *** JavaScript *** -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

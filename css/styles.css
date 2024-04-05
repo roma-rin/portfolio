@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient(70deg, #F2DFCE, #faf8f6)!important;
+    background: linear-gradient(70deg, #FDEBDA, #faf8f6)!important;
     background-attachment: fixed!important;
     font-family: 'SonderFont';
-    color: #fb5101;
+    color: #F47500;
 }
 
 @font-face {
@@ -33,8 +33,7 @@ body {
 } 
 
 /* main */
-
-#whatismyname{
+#what-is-my-name {
     margin: auto;
     margin-top:70px;
     font-size: 160px;
@@ -43,26 +42,26 @@ body {
     padding:40px; 
 }
 
-img {
-    border-radius: 200px 200px 0px 0px;
-    height:80%;
-} 
-
-#profile-picture-container{
+#profile-picture-container {
     display: flex;
     justify-content: right;
     align-items: right;
     padding-right: 50px;
 }
 
-.second-title{
+img {
+    border-radius: 200px 200px 0px 0px;
+    height:50vh;
+} 
+
+#main-position {
     text-align: justify;
     line-height: 1;
     font-size: 80px;
     padding-right: 20%;
 }
 
-.description {
+#description {
     font-family: 'GroteskFont';
     font-size: 25px;
     text-align: justify;
@@ -70,41 +69,37 @@ img {
     padding-right: 20%;
 } 
 
-/* @media (max-width: 768px) {
+@media (max-width: 1200px) {
 
-    body{
-        text-align: center;
+    body {
+        align-content: center;
+    }
+
+    #profile-picture-container {
+        padding:0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #what-is-my-name {
+        font-size: 100px;
     }
 
     img {
-        width: 60%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        height: 50vh;
+    }    
+
+    #main-position {
+        text-align: center;
+        font-size: 50px;
+        padding-right: 0%;
     }
 
-    .first-title,
-    .second-title,
-    .description {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;  Center-align titles and description 
+    #description {
+        padding: 5%;
+        font-size: 25px;
     }
-
-    .first-title {
-        font-size: 80px; 
-    }
-    .second-title {
-        margin-top: 30px;
-        font-size: 40px;
-    }
-
-    .description {
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: justify;
-    }
-} */
+}  
 
 /* .timeline-text {
     color: #faf8f6;

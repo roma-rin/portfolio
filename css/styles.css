@@ -33,6 +33,7 @@ body {
 } 
 
 /* main */
+/* what is my name section */
 #what-is-my-name {
     margin: auto;
     margin-top:70px;
@@ -42,6 +43,7 @@ body {
     padding:40px; 
 }
 
+/* who i am section */
 #profile-picture-container {
     display: flex;
     justify-content: right;
@@ -54,14 +56,14 @@ img {
     height:50vh;
 } 
 
-#main-position {
+#main-position-container {
     text-align: justify;
     line-height: 1;
     font-size: 80px;
     padding-right: 20%;
 }
 
-#description {
+#description-container {
     font-family: 'GroteskFont';
     font-size: 25px;
     text-align: justify;
@@ -89,13 +91,13 @@ img {
         height: 50vh;
     }    
 
-    #main-position {
+    #main-position-container {
         text-align: center;
         font-size: 50px;
         padding-right: 0%;
     }
 
-    #description {
+    #description-container {
         padding: 5%;
         font-size: 25px;
     }

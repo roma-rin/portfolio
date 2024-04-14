@@ -39,11 +39,15 @@ body {
     margin-top:70px;
     font-size: 160px;
     text-align: center;
-    border: solid black 1px;
     padding:40px; 
 }
 
 /* who i am section */
+
+.row {
+    margin-right: 0;
+}
+
 #profile-picture-container {
     display: flex;
     justify-content: right;
@@ -73,17 +77,18 @@ img {
 
 /* what is my bg section */
 #what-is-my-bg {
-    color: #faf8f6;
     font-family: 'GroteskFont';
     font-size: 25px;
     padding-top: 3%;
+    margin-left: 60px;
+    margin-right: 60px;
 } 
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 100px); 
-    padding: 30px;
+    padding: 20px;
 }
 
 .box {
@@ -112,18 +117,20 @@ img {
 
 #bachelor-box-container {
     grid-column-end: span 4;
-    grid-column-start: 1;
+    grid-column-start: ;
     grid-row: 3;
 }
 
 #bg-up-text{
     padding-top: 10px;
     margin: 0px;
+    font-weight: bold;
+    color:white;
 }
 
 #bg-down-text{
     font-size: 20px;
-    color: #faf8f6;
+    color: #FDEBDA;
 }
 
 /* main media query section */
@@ -162,15 +169,26 @@ img {
         font-size: 20px;
         text-align: center;
         padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .grid-container {
         grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .box {
+        padding-left: 0px;
     }
 
     #phd-box-container, #master-box-container, #bachelor-box-container {
         height: 80px;
         grid-column-end: span 1;
         grid-column-start: 1;
+    }
+
+    #bg-down-text{
+        font-size: 18px;
     }
 } 

@@ -131,9 +131,13 @@ img {
     color:white;
 }
 
-#bg-down-text {
-    font-size: 20px;
+#bg-down-text, #bg-down-long-text {
+    font-size: 1.1vw;
     color: #FDEBDA;
+}
+
+#bg-down-short-text { 
+    display: none; 
 }
 
 /* main media query section */
@@ -196,5 +200,14 @@ img {
     
     #bg-down-text {
         font-size: 18px;
+    }
+
+    #bg-down-long-text { 
+        display: none; 
+    }
+    
+    #bg-down-short-text { 
+        display: inline-block;
+        color: #FDEBDA; 
     }
 } 

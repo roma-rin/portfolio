@@ -66,7 +66,7 @@
             </div>
             <div class="box" id="phd-box-container">
               <p id="bg-up-text">PhD | BioInformatics</p>
-              <p id="bg-down-long-text"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo">Institute of Genetics & Development of Rennes, GEO team, FR</a></p>
+              <p id="bg-down-long-text"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo">Institute of Genetics & Development of Rennes, FR</a></p>
               <p id="bg-down-short-text"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo"> IGDR, FR</a></p>
             </div>
             <div class="box" id="master-box-container">
@@ -89,13 +89,50 @@
     <!-- *** News section *** -->
     <div id="news">
       <section id="whats-up">
+        <button class="accordion">2024</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">2023</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">2022</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
       </section>
     </div>
   </main>
   
   <!-- *** JavaScript ***  -->
+  <!-- *** NavBar *** -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  <!-- *** News section *** -->
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    } 
+  </script>
 </body>
 </html>

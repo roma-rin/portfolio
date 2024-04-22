@@ -169,6 +169,49 @@ a:hover {
     line-height: 1;
 }
 
+/* what's up section*/
+#whats-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+#whats-up .accordion {
+    color: #F47500;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    font-size: 80px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-bottom: solid #F47500 3px;
+}
+  
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+#whats-up .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #F47500;
+    float: right;
+    margin-left: 5px;
+  }
+  
+#whats-up .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 /* main media query section */
 @media (max-width: 1200px) {
     

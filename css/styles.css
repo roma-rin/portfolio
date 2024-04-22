@@ -161,8 +161,12 @@ a:hover {
     display: none; 
 }
 
-#stanford-box-container #bg-down-text,  #erasmus-box-container #bg-down-text{
-    line-height: 0.9;
+#stanford-box-container #bg-up-text, #erasmus-box-container #bg-up-text {
+    padding-top: 5px;
+}
+
+#stanford-box-container #bg-down-text, #erasmus-box-container #bg-down-text {
+    line-height: 1;
 }
 
 /* main media query section */

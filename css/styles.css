@@ -184,32 +184,34 @@ a:hover {
     color: #F47500;
     background-color: inherit;
     cursor: pointer;
-    padding: 18px;
-    width: 90%;
+    padding-top: 18px;
+    width: 92%;
     font-size: 80px;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-    border-bottom: solid #F47500 3px;
+    border-bottom: solid #F47500 5px;
 }
   
 .panel {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
+    width: 92%;
+    display:none;
 }
 
 #whats-up .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    content: '\2235'; 
     color: #F47500;
+    font-size: 50px;
     float: right;
-    margin-left: 5px;
-  }
+    position: relative;
+    top: 20px;
+}
   
 #whats-up .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: '\2234';
+    color: #F47500;
+    float: right;
 }
 
 /* main media query section */
@@ -285,5 +287,20 @@ a:hover {
 
     #stanford-box-container #bg-down-text,  #erasmus-box-container #bg-down-text{
         line-height: normal;
+    }
+
+    /* whats up section */
+    #whats-up {
+        padding-top: 20px;
+    }
+
+    #whats-up .accordion {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #whats-up .accordion:after {
+        font-size: 30px;
+        top: 15px;
     }
 } 

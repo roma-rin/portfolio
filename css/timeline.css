@@ -1,0 +1,118 @@
+#timeline {
+  list-style: none;
+  margin: -30px 0 30px 85px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: 8px solid #F47500;
+  li {
+    margin: 40px 0;
+    position: relative;
+  }
+  p {
+    margin: 20px 0 20px;
+  }
+}
+
+.date {
+    top: 46%; /* Position from top */
+    left: -56%;
+    font-size: 1.1vw;
+    line-height: 20px;
+    position: absolute;
+    font-family: "GroteskFont";
+    transform: translateY(-50%); /* Center vertically */
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Make text span full width for centering */
+  }
+
+.circle {
+  margin-top: -15px;
+  top: 50%;
+  left: -46px;
+  width: 25px ;  
+  height: 25px;
+  background: #F47500;
+  border: 10px solid #F47500;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.content {
+  max-height: 20px;
+  padding: 50px 20px 0;
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50px;
+  font-family: 'GroteskFont';
+  font-size: 1.1vw;
+  position: relative;
+  &:before, &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    position: absolute;
+    pointer-events: none;
+    right: 100%;
+  }
+  &:before {
+    border-width: 20px;
+    top: 50%;
+    margin-top: -20px;
+  }
+  &:after {
+    border-width: 17px;
+    top: 50%;
+    margin-top: -17px;
+  }
+  p {
+    max-height: 0;
+    color: transparent;
+    text-align: justify;
+    word-break: break-word;
+    hyphens: auto;
+    overflow: hidden;
+    color: transparent;
+  }
+}
+
+label{
+  font-size: 40px;
+  top: -5px;
+  position: absolute;
+  color:#F47500;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 0.2s linear;
+}
+.radio {
+  display: none;
+}
+.radio:checked {
+  & + .relative {
+    label {
+      top:20px;
+      color:white;
+      cursor: auto;
+      -webkit-transform: translateX(42px);
+    }
+    .circle {
+       background: #F47500; 
+    }
+  }
+  & ~ .content {
+    width:80%;
+    max-height: 180px;
+    border-color: #F47500;
+    background-color: #F47500;
+    margin-right: 20px;
+    -webkit-transform: translateX(20px);
+    -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
+    p {
+      max-height: 200px;
+      color: #FDEBDA;
+      -webkit-transition: color 0.3s linear 0.3s;
+    }
+  }
+}

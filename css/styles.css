@@ -111,8 +111,8 @@ a {
 } 
 
 a:hover {
-    color:#8C665E; 
-    text-decoration:none; 
+    color:white; 
+    text-decoration:underline; 
 }
 
 #stanford-box-container {
@@ -190,13 +190,17 @@ a:hover {
     text-align: left;
     border: none;
     outline: none;
-    transition: 0.4s;
     border-bottom: solid #F47500 5px;
 }
   
 .panel {
     width: 92%;
     display:none;
+    border-bottom: solid #F47500 5px;
+}
+
+#whats-up .accordion.active {
+    border-bottom: none; /* Remove the border-bottom */
 }
 
 #whats-up .accordion:after {

@@ -304,7 +304,27 @@ a:hover {
     }
 
     #whats-up .accordion:after {
-        font-size: 30px;
+        font-size: 40px;
         top: 15px;
+    }
+
+    #timeline {
+
+    }
+
+    .date {
+
+    }
+
+    .circle {
+
+    }
+
+    .content {
+
+    }
+
+    .label {
+        font-size: 5px;
     }
 } 

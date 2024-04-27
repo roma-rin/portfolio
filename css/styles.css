@@ -58,7 +58,7 @@ body {
     padding-right: 50px;
 }
 
-img {
+#profile-picture-container img {
     border-radius: 200px 200px 0px 0px;
     height:50vh;
 } 
@@ -106,11 +106,11 @@ img {
     flex-direction: column;
 }
 
-a { 
+#what-is-my-bg a { 
     color: inherit; 
 } 
 
-a:hover {
+#what-is-my-bg a:hover {
     color:white; 
     text-decoration:underline; 
 }
@@ -218,6 +218,33 @@ a:hover {
     float: right;
 }
 
+/* Contact */
+#where-to-contact-me {
+    margin-top:10px;
+    margin-bottom: 100px;
+}
+
+#contact-picture-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+#contact-picture-container img {
+    height: 20vh;
+}
+
+#where-to-contact-me a {
+    font-size: 20px;
+    font-family: 'GroteskFont';
+    color:inherit; 
+    text-decoration:none; 
+}
+
+#where-to-contact-me a:hover {
+    text-decoration:underline; 
+}
+
 /* main media query section */
 @media (max-width: 1200px) {
     
@@ -306,5 +333,24 @@ a:hover {
     #whats-up .accordion:after {
         font-size: 40px;
         top: 15px;
+    }
+
+    /* where to contact me section */
+    #where-to-contact-me {
+        margin-top:10px;
+        margin-bottom: 60px;
+        text-align: center;
+
+    }
+    
+    #contact-picture-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    #contact-picture-container img {
+        height: 150px;
     }
 } 

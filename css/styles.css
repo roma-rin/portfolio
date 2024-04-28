@@ -182,9 +182,13 @@ body {
     height: 100vh;
     padding-top: 50px;
     box-sizing: border-box;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
+
+#whats-up a { 
+    color: inherit; 
+} 
 
 #whats-up .accordion {
     color: #F47500;
@@ -197,12 +201,14 @@ body {
     border: none;
     outline: none;
     border-bottom: solid #F47500 5px;
+    border-radius: 5px;
 }
   
 .panel {
     width: 92%;
     display:none;
-    border-bottom: solid #F47500 5px;
+    border-bottom: solid #F47500 5px; 
+    border-radius: 5px;
 }
 
 #whats-up .accordion.active {

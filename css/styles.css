@@ -23,17 +23,23 @@ body {
 .navbar {
     font-family: 'GroteskFont';
     font-size: 15px;
-    background-color: transparent !important;
+    background-color: #faf3ec !important;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,.1);
+    border-radius: 8px;
+    width: 400px;
+	height: 50px;
+	margin: 20px auto 0;
 } 
 
 .nav-link {
     color: #8C665E!important;
     font-weight: bold;
     font-size: 22px;
+    
 }
 
-.nav-link:focus {
-    color: #d4afa7!important;
+.nav-link:hover {
+    color:  #d4afa7 !important;
 } 
 
 /* ABOUT */

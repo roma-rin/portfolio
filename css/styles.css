@@ -25,9 +25,9 @@ body {
     font-size: 15px;
     background-color: #faf3ec !important;
     box-shadow: 1px 2px 2px 1px rgba(0,0,0,.1);
-    border-radius: 8px;
+    border-radius: 50px;
     width: 400px;
-	height: 50px;
+	height: 60px;
 	margin: 20px auto 0;
 } 
 
@@ -35,12 +35,15 @@ body {
     color: #8C665E!important;
     font-weight: bold;
     font-size: 22px;
-    
 }
 
 .nav-link:hover {
     color:  #d4afa7 !important;
-} 
+}  */
+
+/* .m-auto {
+    margin:0 auto 0 auto !important;
+}  */
 
 /* ABOUT */
 .row {

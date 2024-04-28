@@ -22,11 +22,10 @@ body {
 /* HEADER: navbar */
 .navbar {
     font-family: 'GroteskFont';
-    font-size: 15px;
     background-color: #faf3ec !important;
     box-shadow: 1px 2px 2px 1px rgba(0,0,0,.1);
     border-radius: 50px;
-    width: 400px;
+    width: 550px;
 	height: 60px;
 	margin: 20px auto 0;
 } 
@@ -39,11 +38,7 @@ body {
 
 .nav-link:hover {
     color:  #d4afa7 !important;
-}  */
-
-/* .m-auto {
-    margin:0 auto 0 auto !important;
-}  */
+} 
 
 /* ABOUT */
 .row {
@@ -187,6 +182,8 @@ body {
     height: 100vh;
     padding-top: 50px;
     box-sizing: border-box;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 
 #whats-up .accordion {
@@ -260,6 +257,10 @@ body {
     body {
         align-content: center;
     }
+    
+    .navbar {
+        width: 450px;
+    } 
     
     /* what is my name section */
     #what-is-my-name {

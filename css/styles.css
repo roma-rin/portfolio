@@ -68,10 +68,10 @@ body {
 } 
 
 #main-position-container {
-    text-align: justify;
+    text-align: left;
     line-height: 1;
     font-size: 80px;
-    padding-right: 20%;
+    padding-right: 15%;
 }
 
 #description-container {
@@ -112,11 +112,11 @@ body {
 
 #what-is-my-bg a { 
     color: inherit; 
+    text-decoration:underline; 
 } 
 
 #what-is-my-bg a:hover {
     color:white; 
-    text-decoration:underline; 
 }
 
 #stanford-box-container {
@@ -188,6 +188,7 @@ body {
 
 #whats-up a { 
     color: inherit; 
+    text-decoration:underline; 
 } 
 
 #whats-up .accordion {

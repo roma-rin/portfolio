@@ -47,10 +47,10 @@
   border-radius: 10px 80px 80px 10px;
   font-family: 'GroteskFont';
   font-size: 20px;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   &:before, &:after {
     content: "";
-    width: 0;
     height: 0;
     border: solid transparent;
     position: absolute;
@@ -100,17 +100,22 @@ label{
     .circle {
       background: #F47500; 
     }
+
+    .date{    
+      text-shadow: 1px 0;
+      font-weight:1000;
+    }
   }
   & ~ .content {
     background-color: #faf3ec;
     box-shadow: 1px 2px 2px 1px rgba(0,0,0,.1);
     width:95%;
-    max-height: 250px;
+    max-height: max-content;
     margin-right: 20px;
     -webkit-transform: translateX(20px);
     -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
     p {
-      max-height: 250px;
+      max-height: max-content;
       margin-right: 80px;
       color: #8C665E;
       -webkit-transition: color 0.3s linear 0.3s;

@@ -257,10 +257,6 @@ body {
     text-decoration:none; 
 }
 
-#where-to-contact-me a:hover {
-    text-decoration:underline; 
-}
-
 /* main media query section */
 @media (max-width: 1200px) {
     

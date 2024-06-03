@@ -191,6 +191,10 @@ body {
     text-decoration:underline; 
 } 
 
+#whats-up a:hover {
+    color: #d4afa7; 
+}
+
 #whats-up .accordion {
     color: #F47500;
     background-color: inherit;
@@ -204,7 +208,6 @@ body {
     border-bottom: solid #F47500 5px;
     border-radius: 5px;
 }
-  
 .panel {
     width: 92%;
     display:none;

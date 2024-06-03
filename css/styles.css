@@ -40,6 +40,10 @@ body {
     color:  #d4afa7 !important;
 }
 
+.nav-link.active, .nav-link:active {
+    color: #d4afa7 !important;
+  }
+
 /* ABOUT */
 .row {
     margin-right: 0;
@@ -254,7 +258,7 @@ body {
     font-family: 'GroteskFont';
     color:inherit; 
     text-decoration:none; 
-}
+} 
 
 /* main media query section */
 @media (max-width: 1200px) {

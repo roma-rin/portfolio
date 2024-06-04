@@ -250,11 +250,40 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const navLinks = document.querySelectorAll('.nav-link');
-    
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          navLinks.forEach(link => link.classList.remove('active'));
-          this.classList.add('active');
+      const sections = document.querySelectorAll('section');
+
+      function removeActiveClasses() {
+        navLinks.forEach(link => link.classList.remove('active'));
+      }
+
+      function addActiveClass(currentLink) {
+        removeActiveClasses();
+        currentLink.classList.add('active');
+      }
+
+      window.addEventListener('scroll', function() {
+        let current = '';
+        const pageHeight = document.documentElement.scrollHeight;
+        const scrollPos = window.innerHeight + window.pageYOffset;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.parentNode.getAttribute('id');
+          }
+        });
+
+        // Check if we've scrolled to the bottom of the page
+        if (scrollPos >= pageHeight) {
+          current = sections[sections.length - 1].parentNode.getAttribute('id');
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+          }
         });
       });
     });

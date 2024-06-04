@@ -42,7 +42,7 @@ body {
 
 .nav-link.active, .nav-link:active {
     color: #d4afa7 !important;
-  }
+}
 
 /* ABOUT */
 .row {
@@ -211,6 +211,7 @@ body {
     border-bottom: solid #F47500 5px;
     border-radius: 5px;
 }
+
 .panel {
     width: 92%;
     display:none;
@@ -235,6 +236,13 @@ body {
     content: '\2234';
     color: #F47500;
     float: right;
+}
+
+#whats-up iframe {
+    margin: auto;
+    padding-top: 30px;
+    display: block;
+    justify-content: center;
 }
 
 /* Contact */

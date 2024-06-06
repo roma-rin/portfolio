@@ -245,6 +245,20 @@ body {
     justify-content: center;
 }
 
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    width: 90%; 
+    padding-bottom: 20px;
+}
+
+div.scroll-container img {
+    padding: 10px;
+    border-radius: 30px;
+    width:500px;
+    height: 500px;
+}
+
 /* Contact */
 #where-to-contact-me {
     margin-top:100px;

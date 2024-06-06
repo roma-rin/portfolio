@@ -1,4 +1,4 @@
-script>
+
     document.addEventListener("DOMContentLoaded", function() {
       var accordions = document.querySelectorAll(".accordion");
       var panels = document.querySelectorAll(".panel");
@@ -17,4 +17,3 @@ script>
         });
       });
     });
-  </script>

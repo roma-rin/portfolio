@@ -1,4 +1,4 @@
-  <script>
+
     document.addEventListener("DOMContentLoaded", function() {
       const navLinks = document.querySelectorAll('.nav-link');
       const sections = document.querySelectorAll('section');
@@ -37,4 +37,3 @@
         });
       });
     });
-  </script>

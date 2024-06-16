@@ -245,18 +245,10 @@ body {
     justify-content: center;
 }
 
-div.scroll-container {
-    overflow: auto;
-    white-space: nowrap;
-    width: 90%; 
-    padding-bottom: 20px;
-}
-
-div.scroll-container img {
-    padding: 10px;
+#whats-up .img-news {
     border-radius: 30px;
-    width:500px;
-    height: 500px;
+    width: 30%; 
+    height: auto;
 }
 
 /* Contact */

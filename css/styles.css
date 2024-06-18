@@ -246,9 +246,39 @@ body {
 }
 
 #whats-up .img-news {
-    border-radius: 30px;
-    width: 30%; 
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    justify-content: center;
+    width: 40%; 
+}
+
+#whats-up .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 5px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+#whats-up .gallery__img {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#whats-up .content{
+    overflow: hidden;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 /* Contact */

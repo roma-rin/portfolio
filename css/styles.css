@@ -259,13 +259,13 @@ body {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(4, auto);
     grid-gap: 5px;
-    padding-left:20px;
-    padding-right:20px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #whats-up .gallery__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -274,11 +274,35 @@ body {
     overflow: hidden;
 }
 
-.gallery__item--1 {
+#whats-up figure {
+    margin: 0;
+}
+
+#whats-up .gallery__item--1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
+}
+
+#whats-up .gallery__item--2 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#whats-up .gallery__item--3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    
+}
+#whats-up .gallery__item--4 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 /* Contact */

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-palette="p4" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — Rose-Marie Fraboulet</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/palettes.css">
+<style>
+a{color:var(--accent-text)}a:hover{color:var(--accent)}
+.ds{max-width:1180px;margin:0 auto;padding:clamp(2.5rem,6vw,5rem) var(--gutter) 6rem;display:flex;flex-direction:column;gap:clamp(3.5rem,7vw,5.5rem)}
+.ds-intro{display:flex;flex-direction:column;gap:var(--s4);max-width:68ch}
+.ds-intro p{color:var(--text-body);text-wrap:pretty}
+.ds-toc{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.ds-toc a{text-decoration:none}
+.ds-sec .section-head{margin-bottom:var(--s6)}
+.ds-sub{font-weight:600;font-size:var(--fs-title);color:var(--text-title);margin:var(--s6) 0 var(--s2)}
+.ds-sub:first-of-type{margin-top:0}
+.ds-note{color:var(--text-muted);font-size:.95rem;max-width:70ch;margin-bottom:var(--s4);text-wrap:pretty}
+.ds-brand{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-radius:var(--r-md);overflow:hidden;margin-bottom:var(--s6)}
+.ds-brand__c{display:flex;flex-direction:column;justify-content:flex-end;gap:2px;min-height:130px;padding:var(--s4);font-size:.85rem}
+.ds-brand__c span:first-child{font-weight:600;font-size:1rem}
+.ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:var(--s5) var(--s6)}
+.ds-sw{display:flex;gap:var(--s4);align-items:flex-start}
+.ds-sw__chip{flex:0 0 52px;height:52px;border-radius:var(--r-sm);border:1px solid var(--hairline)}
+.ds-sw__n{font-weight:600;color:var(--text-title);line-height:1.3}
+.ds-sw__v{font-size:.85rem;color:var(--text-body)}
+.ds-sw__u{font-size:.85rem;color:var(--text-muted);line-height:1.4}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85em;color:var(--tag-ink)}
+.ds-type{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:var(--s6);align-items:center;padding:var(--s5) 0;border-top:1px solid var(--hairline)}
+.ds-type:last-child{border-bottom:1px solid var(--hairline)}
+.ds-type .hero-name{font-size:clamp(3rem,8vw,5.5rem)}
+.ds-type .eyebrow{margin:0}
+.ds-sp{display:grid;grid-template-columns:56px minmax(0,1fr) 60px;gap:var(--s4);align-items:center;padding:6px 0}
+.ds-sp__bar{height:12px;border-radius:3px;background:var(--accent)}
+.ds-sp__v{font-size:.85rem;color:var(--text-muted);text-align:right}
+.ds-rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:var(--s5)}
+.ds-r{display:flex;flex-direction:column;gap:6px}
+.ds-r__box{height:90px;border:1px solid var(--hairline);background:color-mix(in srgb,var(--surface) 60%,transparent)}
+.ds-motion{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:var(--s5)}
+.ds-m{display:flex;flex-direction:column;gap:4px}
+.ds-demo{display:flex;flex-wrap:wrap;gap:var(--s5);align-items:flex-start}
+.ds-demo .sl__track{overflow:visible;margin:0;padding:0;-webkit-mask-image:none;mask-image:none;cursor:default;flex-wrap:wrap}
+.ds-demo .sl__panel{flex:0 0 min(360px,100%)}
+.ds-demo .wa{grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));width:100%}
+.ds-demo--col{flex-direction:column;align-items:stretch}
+.ds-label{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--s2)}
+.ds-code{margin-top:var(--s4)}
+.ds-code summary{cursor:pointer;width:max-content;font-size:.9rem;color:var(--text-muted)}
+.ds-code summary:hover{color:var(--text-title)}
+.ds-code pre{margin:var(--s3) 0 0;padding:var(--s4);max-height:280px;overflow:auto;border-radius:var(--r-sm);background:var(--deep-bg);border:1px solid var(--hairline);font-size:.8rem;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+.ds-rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--s4) var(--s6)}
+.ds-rules li{display:flex;flex-direction:column;gap:4px;padding-top:var(--s4);border-top:1px solid var(--hairline)}
+.ds-rules p{font-size:.95rem;color:var(--text-body);text-wrap:pretty}
+.ds-nav-demo{position:relative}
+.ds-nav-demo nav{position:static}
+@media (max-width:680px){.ds-type{grid-template-columns:1fr;gap:var(--s3)}.ds-brand{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-brand__c{min-height:90px}}
+</style>
+</head>
+<body>
+<main class="ds">
+<header class="ds-intro">
+<span class="eyebrow">Design System · v1</span>
+<h1 class="hero-name" style="font-size:clamp(3rem,9vw,6rem)">Rose's system<span class="dot">.</span></h1>
+<p>Every foundation and component of the portfolio, in plain CSS. This page loads <code>css/style.css</code> and <code>css/palettes.css</code> directly: what you see here is exactly what the site renders, and colour and spacing values are read live.</p>
+<nav class="ds-toc" aria-label="Sections"><a class="tag" href="#couleurs">Colour</a><a class="tag" href="#typo">Typography</a><a class="tag" href="#espace">Spacing & radii</a><a class="tag" href="#mouvement">Motion</a><a class="tag" href="#composants">Components</a><a class="tag" href="#regles">Rules</a></nav>
+</header>
+
+<section class="ds-sec" id="couleurs"><div class="section-head"><span class="eyebrow">Foundations</span><h2>Colour<span class="dot">.</span></h2></div>
+<p class="ds-note">Bordeaux palette (from the Color Inspiration book), dark theme only. Enabled with <code>&lt;html data-palette="p4" data-theme="dark"&gt;</code>. Never hard-code a colour: always use the token.</p>
+<div class="ds-brand"><div class="ds-brand__c" style="background:#8C1632;color:#f8f5e9"><span>Bordeaux</span><span>#8C1632</span></div><div class="ds-brand__c" style="background:#977881;color:#f8f5e9"><span>Mauve</span><span>#977881</span></div><div class="ds-brand__c" style="background:#F39118;color:#f8f5e9"><span>Orange</span><span>#F39118</span></div><div class="ds-brand__c" style="background:#F0B952;color:#2d1520"><span>Gold</span><span>#F0B952</span></div><div class="ds-brand__c" style="background:#F8F5E9;color:#2d1520"><span>Cream</span><span>#F8F5E9</span></div></div>
+<p class="ds-sub">Tokens</p>
+<div class="ds-grid"><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--bg)"></span><div><p class="ds-sw__n">Background</p><p class="ds-sw__v"><code>--bg</code> · <span data-hex="--bg"></span></p><p class="ds-sw__u">Page, gradient to --bg-tint</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--bg-tint)"></span><div><p class="ds-sw__n">Background tint</p><p class="ds-sw__v"><code>--bg-tint</code> · <span data-hex="--bg-tint"></span></p><p class="ds-sw__u">Bottom of the page gradient</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--surface)"></span><div><p class="ds-sw__n">Surface</p><p class="ds-sw__v"><code>--surface</code> · <span data-hex="--surface"></span></p><p class="ds-sw__u">Cards (60 % opacity + blur)</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--surface-2)"></span><div><p class="ds-sw__n">Surface 2</p><p class="ds-sw__v"><code>--surface-2</code> · <span data-hex="--surface-2"></span></p><p class="ds-sw__u">Hover, favicon background</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--hairline)"></span><div><p class="ds-sw__n">Hairline</p><p class="ds-sw__v"><code>--hairline</code> · <span data-hex="--hairline"></span></p><p class="ds-sw__u">Borders, dividers</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--ink-900)"></span><div><p class="ds-sw__n">Cream</p><p class="ds-sw__v"><code>--ink-900</code> · <span data-hex="--ink-900"></span></p><p class="ds-sw__u">Headings, strong text</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--ink-700)"></span><div><p class="ds-sw__n">Text</p><p class="ds-sw__v"><code>--ink-700</code> · <span data-hex="--ink-700"></span></p><p class="ds-sw__u">Body text</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--ink-500)"></span><div><p class="ds-sw__n">Muted</p><p class="ds-sw__v"><code>--ink-500</code> · <span data-hex="--ink-500"></span></p><p class="ds-sw__u">Places, dates, meta</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--dot-2)"></span><div><p class="ds-sw__n">Mauve</p><p class="ds-sw__v"><code>--dot-2</code> · <span data-hex="--dot-2"></span></p><p class="ds-sw__u">Progress line at rest</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--accent)"></span><div><p class="ds-sw__n">Orange</p><p class="ds-sw__v"><code>--accent</code> · <span data-hex="--accent"></span></p><p class="ds-sw__u">Accent: titles, arrows, progress</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--accent-text)"></span><div><p class="ds-sw__n">Orange text</p><p class="ds-sw__v"><code>--accent-text</code> · <span data-hex="--accent-text"></span></p><p class="ds-sw__u">Orange links and icons on dark</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--camel)"></span><div><p class="ds-sw__n">Gold</p><p class="ds-sw__v"><code>--camel</code> · <span data-hex="--camel"></span></p><p class="ds-sw__u">Tags (--tag-ink on --tag-bg)</p></div></div><div class="ds-sw"><span class="ds-sw__chip" style="background:var(--deep-bg)"></span><div><p class="ds-sw__n">Deep bordeaux</p><p class="ds-sw__v"><code>--deep-bg</code> · <span data-hex="--deep-bg"></span></p><p class="ds-sw__u">Bottom glow, darkest fills</p></div></div></div>
+<p class="ds-sub">Background light</p>
+<p class="ds-note">Three glows (<code>--glow-1</code> orange, <code>--glow-2</code> gold, <code>--glow-3</code> bordeaux) on <code>body::before</code>, drifting slowly (40 s). They are visible behind this page.</p>
+</section>
+
+<section class="ds-sec" id="typo"><div class="section-head"><span class="eyebrow">Foundations</span><h2>Typography<span class="dot">.</span></h2></div>
+<p class="ds-note"><strong>Sonder</strong> (<code>--font-display</code>, local file) for headings, years and project names. <strong>Hanken Grotesk</strong> 400/500/600 (<code>--font-body</code>, Google Fonts) for everything else. Every section title is an orange sentence ending with a cream full stop.</p>
+<div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Display XL</p><p class="ds-sw__u">Sonder · --fs-hero · once per page</p></div><div class="ds-type__s"><span class="hero-name" style="font-family:var(--font-display);font-size:var(--fs-hero);line-height:.95;color:var(--name)">I'm Rose<span class="dot">.</span></span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Section title</p><p class="ds-sw__u">Sonder · --fs-h2 · orange, cream full stop</p></div><div class="ds-type__s"><span class="" style="font-family:var(--font-display);font-size:var(--fs-h2);line-height:1.05;color:var(--name)">Where we can talk<span class="dot" style="color:var(--ink-900)">.</span></span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Year / card name</p><p class="ds-sw__u">Sonder · .sl__from + .sl__to</p></div><div class="ds-type__s"><span class="" style="font-family:var(--font-display);font-size:2.4rem;line-height:1;color:var(--ink-900)">2021 <span style="font-size:1.1rem;color:var(--ink-500)">— 2024</span></span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Card title</p><p class="ds-sw__u">Hanken 600 · --fs-title</p></div><div class="ds-type__s"><span class="" style="font-weight:600;font-size:var(--fs-title);line-height:1.3;color:var(--ink-900)">PhD · Bioinformatics</span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Body text</p><p class="ds-sw__u">Hanken 400 · 1rem → 1.09rem fluid</p></div><div class="ds-type__s"><span class="" style="font-size:1.05rem;line-height:1.65;color:var(--ink-700);max-width:60ch">Since March 2025 I’ve been leading bioinformatics projects in Paris.</span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Meta</p><p class="ds-sw__u">Hanken 400 · .9–.95rem · --ink-500</p></div><div class="ds-type__s"><span class="" style="font-size:.92rem;line-height:1.45;color:var(--ink-500)">Collecteur Analyseur de Données · Paris, FR</span></div></div><div class="ds-type"><div class="ds-type__meta"><p class="ds-sw__n">Label</p><p class="ds-sw__u">Hanken 500 · --fs-label · spaced caps</p></div><div class="ds-type__s"><span class="eyebrow" style="">Background</span></div></div>
+</section>
+
+<section class="ds-sec" id="espace"><div class="section-head"><span class="eyebrow">Foundations</span><h2>Spacing & radii<span class="dot">.</span></h2></div>
+<p class="ds-sub">Spacing scale</p>
+<p class="ds-note">Eight steps, for every margin and <code>gap</code>. Side margins: <code>--gutter</code> (fluid, 20 → 72 px). Content width: <code>--maxw</code>.</p>
+<div class="ds-sp"><code>--s1</code><span class="ds-sp__bar" style="width:var(--s1)"></span><span class="ds-sp__v" data-len="--s1"></span></div><div class="ds-sp"><code>--s2</code><span class="ds-sp__bar" style="width:var(--s2)"></span><span class="ds-sp__v" data-len="--s2"></span></div><div class="ds-sp"><code>--s3</code><span class="ds-sp__bar" style="width:var(--s3)"></span><span class="ds-sp__v" data-len="--s3"></span></div><div class="ds-sp"><code>--s4</code><span class="ds-sp__bar" style="width:var(--s4)"></span><span class="ds-sp__v" data-len="--s4"></span></div><div class="ds-sp"><code>--s5</code><span class="ds-sp__bar" style="width:var(--s5)"></span><span class="ds-sp__v" data-len="--s5"></span></div><div class="ds-sp"><code>--s6</code><span class="ds-sp__bar" style="width:var(--s6)"></span><span class="ds-sp__v" data-len="--s6"></span></div><div class="ds-sp"><code>--s7</code><span class="ds-sp__bar" style="width:var(--s7)"></span><span class="ds-sp__v" data-len="--s7"></span></div><div class="ds-sp"><code>--s8</code><span class="ds-sp__bar" style="width:var(--s8)"></span><span class="ds-sp__v" data-len="--s8"></span></div>
+<p class="ds-sub">Radii</p>
+<div class="ds-rgrid"><div class="ds-r"><span class="ds-r__box" style="border-radius:var(--r-sm)"></span><code>--r-sm</code><span class="ds-sw__u"><span data-len="--r-sm"></span> · News images, small blocks</span></div><div class="ds-r"><span class="ds-r__box" style="border-radius:var(--r-md)"></span><code>--r-md</code><span class="ds-sw__u"><span data-len="--r-md"></span> · Background / Projects cards</span></div><div class="ds-r"><span class="ds-r__box" style="border-radius:var(--r-lg)"></span><code>--r-lg</code><span class="ds-sw__u"><span data-len="--r-lg"></span> · Large containers</span></div><div class="ds-r"><span class="ds-r__box" style="border-radius:var(--r-pill)"></span><code>--r-pill</code><span class="ds-sw__u"><span data-len="--r-pill"></span> · Tags, buttons</span></div></div>
+</section>
+
+<section class="ds-sec" id="mouvement"><div class="section-head"><span class="eyebrow">Foundations</span><h2>Motion<span class="dot">.</span></h2></div>
+<div class="ds-motion">
+<div class="ds-m"><p class="ds-sw__n"><code>--t-fast</code> · .18s ease</p><p class="ds-sw__u">Hover colours, links, icons.</p></div>
+<div class="ds-m"><p class="ds-sw__n"><code>--t</code> · .28s ease</p><p class="ds-sw__u">Card borders, state changes.</p></div>
+<div class="ds-m"><p class="ds-sw__n">.45s · ease-out</p><p class="ds-sw__u">Arrow rotation, accordions opening, sub-experience fade.</p></div>
+<div class="ds-m"><p class="ds-sw__n">Reduced motion</p><p class="ds-sw__u">All animations are turned off when the system asks for it (<code>prefers-reduced-motion</code>).</p></div>
+</div>
+</section>
+
+<section class="ds-sec" id="composants"><div class="section-head"><span class="eyebrow">Components</span><h2>Components<span class="dot">.</span></h2></div>
+
+<p class="ds-sub">Section title</p>
+<p class="ds-note">Label + Sonder sentence, hairline below. One per section.</p>
+<div class="section-head" style="margin:0"><span class="eyebrow">Projects</span><h2>What I've built and published<span class="dot">.</span></h2></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="section-head"&gt;&lt;span class="eyebrow"&gt;Projects&lt;/span&gt;&lt;h2&gt;What I've built and published&lt;span class="dot"&gt;.&lt;/span&gt;&lt;/h2&gt;&lt;/div&gt;</code></pre></details>
+
+<p class="ds-sub">Role and tags</p>
+<p class="ds-note">Tags: gold pills, short text. Always in a row with <code>gap</code>.</p>
+<div class="ds-demo ds-demo--col"><p class="hero-role"><strong>Bioinformatics Project Manager</strong><span>Collecteur Analyseur de Données · Paris, France</span></p><div class="hero-meta">
+              <span class="tag">PhD in Bioinformatics</span>
+              <span class="tag">RNA regulatory networks</span>
+              <span class="tag">R · Python · Shiny</span>
+            </div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="hero-meta"&gt;
+              &lt;span class="tag"&gt;PhD in Bioinformatics&lt;/span&gt;
+              &lt;span class="tag"&gt;RNA regulatory networks&lt;/span&gt;
+              &lt;span class="tag"&gt;R · Python · Shiny&lt;/span&gt;
+            &lt;/div&gt;</code></pre></details>
+
+<p class="ds-sub">Background card</p>
+<p class="ds-note">All cards share the same height and title baseline. The down arrow only appears when there are sub-experiences; it swaps the content for the list and flips. Only the arrow is clickable.</p>
+<div class="ds-demo"><div><p class="ds-label">Simple</p><ol class="sl__track"><li class="sl__panel is-now"><div class="sl__period"><span class="sl__from">2025</span><span class="sl__to">— now</span></div><div class="sl__body"><p class="sl__role">Bioinformatics Project Manager</p><p class="sl__place">Collecteur Analyseur de Données · Paris, FR</p></div></li></ol></div><div><p class="ds-label">With sub-experiences</p><ol class="sl__track"><li class="sl__panel has-sub has-multi"><div class="sl__faces"><div class="sl__face sl__face--main is-shown"><div class="sl__period"><span class="sl__from">2021</span><span class="sl__to">— 2024</span></div><div class="sl__body"><p class="sl__role">PhD · Bioinformatics</p><p class="sl__place"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener">Institute of Genetics &amp; Development of Rennes</a> · FR</p></div></div><div class="sl__face sl__face--list"  aria-hidden="true"><ul class="sl__list"><li><span class="sl__list-year">2022</span><div><p class="sl__list-role">Teaching Assistant</p><p class="sl__place">Université de Paris · FR</p></div></li><li><span class="sl__list-year">2023</span><div><p class="sl__list-role">Visiting Student Researcher</p><p class="sl__place"><a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">Salzman Lab, Stanford University</a> · USA</p></div></li></ul></div></div><button type="button" class="sl__toggle" aria-expanded="false"  data-label="Show 2 other experiences" aria-label="Show 2 other experiences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></li></ol></div><div><p class="ds-label">Open</p><ol class="sl__track"><li class="sl__panel has-sub has-multi"><div class="sl__faces"><div class="sl__face sl__face--main"><div class="sl__period"><span class="sl__from">2021</span><span class="sl__to">— 2024</span></div><div class="sl__body"><p class="sl__role">PhD · Bioinformatics</p><p class="sl__place"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener">Institute of Genetics &amp; Development of Rennes</a> · FR</p></div></div><div class="sl__face sl__face--list is-shown"  aria-hidden="true"><ul class="sl__list"><li><span class="sl__list-year">2022</span><div><p class="sl__list-role">Teaching Assistant</p><p class="sl__place">Université de Paris · FR</p></div></li><li><span class="sl__list-year">2023</span><div><p class="sl__list-role">Visiting Student Researcher</p><p class="sl__place"><a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">Salzman Lab, Stanford University</a> · USA</p></div></li></ul></div></div><button type="button" class="sl__toggle" aria-expanded="true"  data-label="Show 2 other experiences" aria-label="Show 2 other experiences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></li></ol></div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;li class="sl__panel has-sub has-multi"&gt;&lt;div class="sl__faces"&gt;&lt;div class="sl__face sl__face--main is-shown"&gt;&lt;div class="sl__period"&gt;&lt;span class="sl__from"&gt;2021&lt;/span&gt;&lt;span class="sl__to"&gt;— 2024&lt;/span&gt;&lt;/div&gt;&lt;div class="sl__body"&gt;&lt;p class="sl__role"&gt;PhD · Bioinformatics&lt;/p&gt;&lt;p class="sl__place"&gt;&lt;a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener"&gt;Institute of Genetics &amp;amp; Development of Rennes&lt;/a&gt; · FR&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="sl__face sl__face--list" id="sub-2" aria-hidden="true"&gt;&lt;ul class="sl__list"&gt;&lt;li&gt;&lt;span class="sl__list-year"&gt;2022&lt;/span&gt;&lt;div&gt;&lt;p class="sl__list-role"&gt;Teaching Assistant&lt;/p&gt;&lt;p class="sl__place"&gt;Université de Paris · FR&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;span class="sl__list-year"&gt;2023&lt;/span&gt;&lt;div&gt;&lt;p class="sl__list-role"&gt;Visiting Student Researcher&lt;/p&gt;&lt;p class="sl__place"&gt;&lt;a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener"&gt;Salzman Lab, Stanford University&lt;/a&gt; · USA&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;button type="button" class="sl__toggle" aria-expanded="false" aria-controls="sub-2" data-label="Show 2 other experiences" aria-label="Show 2 other experiences"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;</code></pre></details>
+
+<p class="ds-sub">Progress line</p>
+<p class="ds-note">One continuous mauve line that fills with an orange gradient, and two arrows without circles (dimmed at either end).</p>
+<div class="ds-demo ds-demo--col"><div class="sl" style="width:100%"><div class="sl__bar"><div class="sl__line" aria-hidden="true"><i data-sl-fill style="width:50%"></i></div><div class="sl__nav"><button type="button" class="sl__btn" data-sl-prev aria-label="Previous step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" class="sl__btn" data-sl-next aria-label="Next step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></div></div></div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="sl__bar"&gt;&lt;div class="sl__line" aria-hidden="true"&gt;&lt;i data-sl-fill&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="sl__nav"&gt;&lt;button type="button" class="sl__btn" data-sl-prev aria-label="Previous step"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/button&gt;&lt;button type="button" class="sl__btn" data-sl-next aria-label="Next step"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details>
+
+<p class="ds-sub">Projects card</p>
+<p class="ds-note">Same shape and height as Background. Name in Sonder + year, tags under the title, description as meta. Diagonal arrow = external link; the card gets an orange outline on hover.</p>
+<div class="ds-demo"><div class="wa"><div class="wa__arch"><div class="sl__period"><span class="sl__from">Cirscan</span><span class="sl__to">— 2024</span></div><div class="wa__tags"><span class="tag">Thesis paper</span><span class="tag">BMC</span></div><div class="sl__body"><p class="sl__place">Sponge mechanisms in circRNA networks</p></div><a class="sl__toggle wa__arrow" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener" aria-label="Read the Cirscan paper (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div></div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="wa__arch"&gt;&lt;div class="sl__period"&gt;&lt;span class="sl__from"&gt;Cirscan&lt;/span&gt;&lt;span class="sl__to"&gt;— 2024&lt;/span&gt;&lt;/div&gt;&lt;div class="wa__tags"&gt;&lt;span class="tag"&gt;Thesis paper&lt;/span&gt;&lt;span class="tag"&gt;BMC&lt;/span&gt;&lt;/div&gt;&lt;div class="sl__body"&gt;&lt;p class="sl__place"&gt;Sponge mechanisms in circRNA networks&lt;/p&gt;&lt;/div&gt;&lt;a class="sl__toggle wa__arrow" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener" aria-label="Read the Cirscan paper (opens in a new tab)"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;</code></pre></details>
+
+<p class="ds-sub">News row</p>
+<p class="ds-note">Date · tag · title · chevron. Only one row open at a time; the chevron turns upward.</p>
+<div class="ds-demo ds-demo--col"><div class="year-row"><span class="year-row__label">2024</span><span class="year-row__rule"></span></div><article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-colloque">
+            <span class="entry__date">Feb 8</span><span class="entry__type"><span class="tag">Talk</span></span>
+            <span class="entry__main"><span class="entry__title">Talk at the 24th Colloque de la Recherche</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" >
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>I had the privilege to present and discuss my research, alongside renowned researchers, at the <a href="https://www.ligue-cancer.net/nos-actualites/24eme-colloque-national-de-la-recherche" target="_blank" rel="noopener">24th Colloque de la Recherche</a> organized by the Ligue Nationale Contre le Cancer — two enriching days of varied talks in the unique setting of the Couvent des Jacobins in Rennes. Many thanks to the Ligue for this opportunity, to all the donors, and to my team for their support throughout my thesis project.</p>
+                <div class="media media--video">
+                  <iframe src="https://www.youtube-nocookie.com/embed/i8p0J6aXDKk" title="24th Colloque de la Recherche — video summary" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="caption">Video summary of the colloquium, where I gave a talk on the role of circRNAs in cutaneous melanoma treatment resistance. Can you spot me? Around the forty-fifth second.</p>
+              </div>
+            </div>
+          </div>
+        </article><article class="entry">
+          <button type="button" class="entry__head" aria-expanded="true" aria-controls="entry-paper">
+            <span class="entry__date">Feb 1</span><span class="entry__type"><span class="tag">Paper</span></span>
+            <span class="entry__main"><span class="entry__title">First scientific article published</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel is-open" >
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>Starting 2024 with great news: my <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">first scientific paper</a> as first author has been published. Cirscan is an interactive Shiny application that automatically infers circRNA–miRNA–mRNA networks from human multi-level transcriptomic data, in order to identify potential sponge mechanisms active in a specific condition at large scale.</p>
+                <p>This project constitutes a significant part of my thesis. A big thank you to the GEO research team and collaborators for their contributions, with a special acknowledgment to the Ligue Nationale Contre le Cancer, which funded my thesis project.</p>
+                <p class="caption">Fraboulet <em>et al.</em> “Cirscan: a shiny application to identify differentially active sponge mechanisms and visualize circRNA–miRNA–mRNA networks”. BMC Bioinformatics, 2024. <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">doi.org/10.1186/s12859-024-05668-y</a></p>
+              </div>
+            </div>
+          </div>
+        </article></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;article class="entry"&gt;
+          &lt;button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-colloque"&gt;
+            &lt;span class="entry__date"&gt;Feb 8&lt;/span&gt;&lt;span class="entry__type"&gt;&lt;span class="tag"&gt;Talk&lt;/span&gt;&lt;/span&gt;
+            &lt;span class="entry__main"&gt;&lt;span class="entry__title"&gt;Talk at the 24th Colloque de la Recherche&lt;/span&gt;&lt;/span&gt;&lt;svg&gt;…&lt;/svg&gt;
+          &lt;/button&gt;
+          &lt;div class="entry__panel" &gt;
+            &lt;div class="entry__inner"&gt;
+              &lt;div class="entry__body"&gt;
+                &lt;p&gt;I had the privilege to present and discuss my research, alongside renowned researchers, at the &lt;a href="https://www.ligue-cancer.net/nos-actualites/24eme-colloque-national-de-la-recherche" target="_blank" rel="noopener"&gt;24th Colloque de la Recherche&lt;/a&gt; organized by the Ligue Nationale Contre le Cancer — two enriching days of varied talks in the unique setting of the Couvent des Jacobins in Rennes. Many thanks to the Ligue for this opportunity, to all the donors, and to my team for their support throughout my thesis project.&lt;/p&gt;
+                &lt;div class="media media--video"&gt;
+                  &lt;iframe src="https://www.youtube-nocookie.com/embed/i8p0J6aXDKk" title="24th Colloque de la Recherche — video summary" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+                &lt;/div&gt;
+                &lt;p class="caption"&gt;Video summary of the colloquium, where I gave a talk on the role of circRNAs in cutaneous melanoma treatment resistance. Can you spot me? Around the forty-fifth second.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/article&gt;</code></pre></details>
+
+<p class="ds-sub">Contact</p>
+<p class="ds-note">Desktop/tablet (≥ 681 px): info on the left, logo on the right, spread across the full width like Background/Projects — not grouped together. Below 680 px: logo on the left (fixed 92 px, to avoid following the text block's height and overflowing when the e-mail wraps), info on the right, Copy button hidden.</p>
+<div class="ds-demo ds-demo--col"><div class="cv-b"><div class="contact-mark cv-b__logo" aria-hidden="true"><img src="img/logo.svg" alt="" width="150" height="146"></div><div class="cp-b"><div class="cp-tags"><span class="tag">Paris, FR</span><span class="tag"><time >14:30</time>&nbsp;local time</span></div><div class="cp-b__mailrow"><a class="cp-b__mail" href="mailto:fraboulet.rosemarie@gmail.com">fraboulet.rosemarie<wbr>@gmail.com</a><button type="button" class="cp-copy" data-copy="fraboulet.rosemarie@gmail.com" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="cp-copy__txt">Copy</span></button></div><div class="cp-b__row"><a href="https://www.linkedin.com/in/r-mfraboulet/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg><span>LinkedIn</span><svg class="cp-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><a href="https://github.com/roma-rin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.9-2.3c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.4 0C6.1 1.4 5 1.7 5 1.7a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 3.5 8.7c0 5 3 6.2 6 6.5a3 3 0 0 0-.9 2.3V21"></path></svg><span>GitHub</span><svg class="cp-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div></div></div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="cv-b"&gt;&lt;div class="contact-mark cv-b__logo" aria-hidden="true"&gt;&lt;img src="img/logo.svg" alt="" width="150" height="146"&gt;&lt;/div&gt;&lt;div class="cp-b"&gt;&lt;div class="cp-tags"&gt;&lt;span class="tag"&gt;Paris, FR&lt;/span&gt;&lt;span class="tag"&gt;&lt;time &gt;14:30&lt;/time&gt;&amp;nbsp;local time&lt;/span&gt;&lt;/div&gt;&lt;div class="cp-b__mailrow"&gt;&lt;a class="cp-b__mail" href="mailto:fraboulet.rosemarie@gmail.com"&gt;fraboulet.rosemarie&lt;wbr&gt;@gmail.com&lt;/a&gt;&lt;button type="button" class="cp-copy" data-copy="fraboulet.rosemarie@gmail.com" aria-label="Copy email address"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;span class="cp-copy__txt"&gt;Copy&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class="cp-b__row"&gt;&lt;a href="https://www.linkedin.com/in/r-mfraboulet/" target="_blank" rel="noopener"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;span&gt;LinkedIn&lt;/span&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/a&gt;&lt;a href="https://github.com/roma-rin" target="_blank" rel="noopener"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;span&gt;GitHub&lt;/span&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details>
+
+<p class="ds-sub">Footer</p>
+<div class="ds-demo ds-demo--col"><div class="site-footer" style="padding:0"><div class="ft"><p>&copy; <span id="year">2026</span> Rose-Marie Fraboulet</p><a class="ft__top" href="#top">Back to top<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div></div></div>
+<details class="ds-code"><summary>Markup</summary><pre><code>&lt;div class="ft"&gt;&lt;p&gt;&amp;copy; &lt;span id="year"&gt;2026&lt;/span&gt; Rose-Marie Fraboulet&lt;/p&gt;&lt;a class="ft__top" href="#top"&gt;Back to top&lt;svg&gt;…&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;</code></pre></details>
+</section>
+
+<section class="ds-sec" id="regles"><div class="section-head"><span class="eyebrow">Usage</span><h2>Rules<span class="dot">.</span></h2></div>
+<ul class="ds-rules">
+<li><p class="ds-sw__n">One shape</p><p>Rectangles with <code>--r-md</code>, surface at 60 % + blur, <code>--hairline</code> border. Same height in Background and Projects.</p></li>
+<li><p class="ds-sw__n">Orange is earned</p><p>Section titles, arrows, progress, hovers. Never as a fill, never for body text.</p></li>
+<li><p class="ds-sw__n">Only the arrow acts</p><p>Down = reveal, diagonal = external link, chevron = expand. Cards themselves are not clickable.</p></li>
+<li><p class="ds-sw__n">Two typefaces, fixed roles</p><p>Sonder for anything read as a title or a year; Hanken for everything else. No all-caps except labels.</p></li>
+<li><p class="ds-sw__n">One section per screen</p><p>Each section fills at least the viewport height; the next one never peeks in.</p></li>
+<li><p class="ds-sw__n">Mobile ≤ 680 px</p><p>Centred hero, justified intro, current section name in the closed menu, logo left of the contact info.</p></li>
+<li><p class="ds-sw__n">Accessibility</p><p>Contrast ≥ 4.5:1, visible orange focus, full keyboard support, touch targets ≥ 44 px, alt text.</p></li>
+</ul>
+</section>
+</main>
+<script>
+(function(){var cs=getComputedStyle(document.documentElement);
+function hex(v){var c=document.createElement('canvas').getContext('2d');c.fillStyle='#000';c.fillStyle=v;return c.fillStyle}
+document.querySelectorAll('[data-hex]').forEach(function(e){var v=cs.getPropertyValue(e.dataset.hex).trim();var hx=hex(v);e.textContent=/^#/.test(hx)?hx.toUpperCase():v});
+document.querySelectorAll('[data-len]').forEach(function(e){var v=cs.getPropertyValue(e.dataset.len).trim();var p=document.createElement('div');p.style.cssText='position:absolute;visibility:hidden;width:'+v;document.body.appendChild(p);var w=p.getBoundingClientRect().width;p.remove();e.textContent=/rem$/.test(v)?Math.round(w)+'px':v});
+document.querySelectorAll('.ds .sl__btn')[0]&&(document.querySelectorAll('.ds .sl__btn')[0].disabled=true);
+document.querySelectorAll('.ds a[href^="http"], .ds button').forEach(function(a){if(a.closest('.ds-code'))return;a.addEventListener('click',function(e){e.preventDefault()})});
+})();
+</script>
+</body>
+</html>

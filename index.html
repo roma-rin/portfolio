@@ -1,43 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="p4" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rose-Marie Fraboulet — Bioinformatics project manager and PhD in bioinformatics. Portfolio, background, publications and news.">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#F47500">
-
-  <!-- Open Graph / Twitter -->
+  <meta name="description" content="Rose-Marie Fraboulet — Bioinformatics project manager, PhD in bioinformatics. Background, publications and news.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#261822">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rose Fraboulet • Portfolio">
   <meta property="og:description" content="Bioinformatics project manager and PhD in bioinformatics — background, publications and projects.">
   <meta property="og:image" content="img/portrait.jpg">
   <meta name="twitter:card" content="summary">
-
-  <link rel="icon" type="image/png" href="img/rf_icon.png">
-  <link rel="apple-touch-icon" href="img/rf_icon.png">
-
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/rf_icon.png" sizes="any">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" href="font/SonderRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <title>Rose Fraboulet • Portfolio</title>
-</head>
-
-<body>
+  <link rel="stylesheet" href="css/palettes.css">
+  </head>
+<body id="top">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <nav class="navbar" aria-label="Primary">
+      <span class="nav-current" aria-hidden="true">About</span>
       <ul class="nav-links" id="nav-links">
         <li><a class="nav-link active" href="#about">About</a></li>
         <li><a class="nav-link" href="#background">Background</a></li>
-        <li><a class="nav-link" href="#work">Work</a></li>
+        <li><a class="nav-link" href="#work">Projects</a></li>
         <li><a class="nav-link" href="#news">News</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
       <div class="navbar-actions">
-        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -46,318 +44,151 @@
   </header>
 
   <main id="main-content">
-    <!-- *** About / Hero *** -->
-    <section id="about" aria-labelledby="about-heading">
-      <div class="hero">
-        <h1 class="hero-name" id="about-heading">I'm Rose.</h1>
-      </div>
-
-      <div class="who-i-am" data-reveal>
-        <div class="profile-picture-container">
-          <img src="img/portrait.jpg" width="577" height="661" alt="Portrait of Rose-Marie Fraboulet" loading="eager">
-        </div>
-        <div class="who-i-am-text">
-          <p class="main-position">Bioinformatics Project Manager <br> at the Collecteur Analyseur de Données, Paris.</p>
-          <p class="description">Since March 2025, I've been leading bioinformatics projects at the Collecteur Analyseur de Données in Paris. Before that, over 3+ years, I worked at the interface between biology and informatics during my PhD, conducting a research project centered on the analysis of the RNA regulatory networks involved in resistance to melanoma treatment.</p>
-          <p class="description">These days, alongside managing projects, I still enjoy exploring various areas of informatics — like rebuilding my own homemade portfolio in HTML, CSS and JavaScript.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- *** Background *** -->
-    <section id="background" aria-labelledby="background-heading">
-      <div class="background" data-reveal>
-        <h2 class="section-heading" id="background-heading">Background</h2>
-        <div class="bg-grid">
-          <div class="bg-box">
-            <p class="bg-role">Bioinformatics Project Manager</p>
-            <p class="bg-place">Collecteur Analyseur de Données, Paris, FR</p>
-          </div>
-          <div class="bg-box">
-            <p class="bg-role">VSR</p>
-            <p class="bg-place"><a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">University of Stanford, USA</a></p>
-          </div>
-          <div class="bg-box">
-            <p class="bg-role">PhD | BioInformatics</p>
-            <p class="bg-place">
-              <a class="long" href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener">Institute of Genetics &amp; Development of Rennes, FR</a>
-              <a class="short" href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener">IGDR, FR</a>
-            </p>
-          </div>
-          <div class="bg-box">
-            <p class="bg-role">MSc | Bioinformatics for Health</p>
-            <p class="bg-place">University of Rennes, FR</p>
-          </div>
-          <div class="bg-box">
-            <p class="bg-role">Erasmus+</p>
-            <p class="bg-place">University of Wrocław, PL</p>
-          </div>
-          <div class="bg-box">
-            <p class="bg-role">BSc | Science in Life and Environment</p>
-            <p class="bg-place">University of Rennes, FR</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- *** Publications & Projects *** -->
-    <section id="work" aria-labelledby="work-heading">
-      <div class="work" data-reveal>
-        <h2 class="section-heading" id="work-heading">Publications &amp; Projects</h2>
-
-        <h3 class="work-subheading">Publications</h3>
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-title">Cirscan: a Shiny application to identify differentially active sponge mechanisms and visualize circRNA–miRNA–mRNA networks</p>
-            <p class="card-meta">Fraboulet <em>et al.</em> · BMC Bioinformatics · 2024</p>
-            <p class="card-body">An interactive Shiny application that automatically infers circRNA–miRNA–mRNA networks from human multi-level transcriptomic data, to identify potential sponge mechanisms active in a specific condition.</p>
-            <div class="card-tags">
-              <span class="card-tag">circRNA</span>
-              <span class="card-tag">Transcriptomics</span>
-              <span class="card-tag">Shiny</span>
+    <!-- About / Hero -->
+    <section id="about" class="hero" aria-labelledby="about-heading" data-screen-label="About">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-name" id="about-heading">I'm Rose<span class="dot">.</span></h1>
+            <p class="hero-role"><strong>Bioinformatics Project Manager</strong><span>Collecteur Analyseur de Données · Paris, France</span></p>
+            <div class="hero-meta">
+              <span class="tag">PhD in Bioinformatics</span>
+              <span class="tag">RNA regulatory networks</span>
+              <span class="tag">R · Python · Shiny</span>
             </div>
-            <a class="card-link" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">Read the paper →</a>
-          </article>
-          <article class="card card-placeholder">
-            More publications coming soon
-          </article>
+          </div>
+          <div class="portrait">
+            <img src="img/portrait.jpg" width="577" height="661" alt="Portrait of Rose-Marie Fraboulet" loading="eager" fetchpriority="high" decoding="async">
+          </div>
         </div>
-
-        <h3 class="work-subheading">Projects</h3>
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-title">Cirscan</p>
-            <p class="card-meta">R · Shiny · Bioinformatics</p>
-            <p class="card-body">The interactive Shiny application behind the Cirscan paper, built to explore circRNA–miRNA–mRNA sponge networks at scale.</p>
-            <div class="card-tags">
-              <span class="card-tag">R</span>
-              <span class="card-tag">Shiny</span>
-            </div>
-            <a class="card-link" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">Learn more →</a>
-          </article>
-          <article class="card">
-            <p class="card-title">Personal Portfolio</p>
-            <p class="card-meta">HTML · CSS · JavaScript</p>
-            <p class="card-body">This very website — designed and built from scratch, from a first HTML/CSS attempt to a modern, accessible and responsive rebuild.</p>
-            <div class="card-tags">
-              <span class="card-tag">HTML</span>
-              <span class="card-tag">CSS</span>
-              <span class="card-tag">JavaScript</span>
-            </div>
-            <a class="card-link" href="https://github.com/roma-rin/portfolio" target="_blank" rel="noopener">View source →</a>
-          </article>
-          <article class="card card-placeholder">
-            More projects coming soon
-          </article>
+        <div class="intro" data-reveal>
+          <p>Since March 2025 I've been leading bioinformatics projects at the Collecteur Analyseur de Données in Paris. Before that, over more than three years, I worked at the interface between biology and informatics during my PhD — a research project centered on the RNA regulatory networks involved in resistance to melanoma treatment.</p>
+          <p>Alongside managing projects, I still enjoy exploring other areas of informatics — like designing and rebuilding this portfolio in HTML, CSS and JavaScript.</p>
         </div>
       </div>
     </section>
 
-    <!-- *** News *** -->
-    <section id="news" aria-labelledby="news-heading">
-      <div class="news" data-reveal>
-        <h2 class="section-heading" id="news-heading">News</h2>
+    <!-- Background -->
+    <section id="background" aria-labelledby="background-heading" data-screen-label="Background"><div class="container" data-reveal><div class="section-head"><span class="eyebrow">Background</span><h2 id="background-heading">Where I've worked and studied<span class="dot">.</span></h2></div><div class="sl" data-slider><div class="sl__bar"><div class="sl__line" aria-hidden="true"><i data-sl-fill></i></div><div class="sl__nav"><button type="button" class="sl__btn" data-sl-prev aria-label="Previous step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" class="sl__btn" data-sl-next aria-label="Next step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></div></div><ol class="sl__track" data-sl-track tabindex="0" aria-label="Background, scroll horizontally"><li class="sl__panel is-now"><div class="sl__period"><span class="sl__from">2025</span><span class="sl__to">— now</span></div><div class="sl__body"><p class="sl__role">Bioinformatics Project Manager</p><p class="sl__place">Collecteur Analyseur de Données · Paris, FR</p></div></li><li class="sl__panel has-sub has-multi"><div class="sl__faces"><div class="sl__face sl__face--main is-shown"><div class="sl__period"><span class="sl__from">2021</span><span class="sl__to">— 2024</span></div><div class="sl__body"><p class="sl__role">PhD · Bioinformatics</p><p class="sl__place"><a href="https://igdr.univ-rennes.fr/expression-des-genes-et-oncogenese-geo" target="_blank" rel="noopener">Institute of Genetics &amp; Development of Rennes</a> · FR</p></div></div><div class="sl__face sl__face--list" id="sub-2" aria-hidden="true"><ul class="sl__list"><li><span class="sl__list-year">2022</span><div><p class="sl__list-role">Teaching Assistant</p><p class="sl__place">Université de Paris · FR</p></div></li><li><span class="sl__list-year">2023</span><div><p class="sl__list-role">Visiting Student Researcher</p><p class="sl__place"><a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">Salzman Lab, Stanford University</a> · USA</p></div></li></ul></div></div><button type="button" class="sl__toggle" aria-expanded="false" aria-controls="sub-2" data-label="Show 2 other experiences" aria-label="Show 2 other experiences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></li><li class="sl__panel"><div class="sl__period"><span class="sl__from">2019</span><span class="sl__to">— 2021</span></div><div class="sl__body"><p class="sl__role">MSc · Bioinformatics for Health</p><p class="sl__place">University of Rennes · FR</p></div></li><li class="sl__panel has-sub"><div class="sl__faces"><div class="sl__face sl__face--main is-shown"><div class="sl__period"><span class="sl__from">2016</span><span class="sl__to">— 2019</span></div><div class="sl__body"><p class="sl__role">BSc · Science in Life</p><p class="sl__place">University of Rennes · FR</p></div></div><div class="sl__face sl__face--list" id="sub-4" aria-hidden="true"><div class="sl__period"><span class="sl__from">2019</span></div><div class="sl__body"><p class="sl__role">Erasmus+</p><p class="sl__place">University of Wrocław · PL</p></div></div></div><button type="button" class="sl__toggle" aria-expanded="false" aria-controls="sub-4" data-label="Show 1 other experience" aria-label="Show 1 other experience"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></li></ol></div></div></section>
 
-        <button type="button" class="accordion-trigger active" aria-expanded="true" aria-controls="panel-2024">2024<span class="accordion-chevron"></span></button>
-        <div class="accordion-panel is-open" id="panel-2024">
-          <ul id="timeline">
-            <li>
-              <input class="timeline-radio" id="work1" name="timeline-2024" type="radio" checked>
-              <div class="relative">
-                <label class="timeline-label" for="work1">Portfolio deployment</label>
-                <span class="date">July. 1st</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content">
-                <p>
-                  I'm excited to share my first website - my portfolio! Building it has been a great opportunity to learn and use HTML and CSS, showing my ability to adapt to any language.
-                  This portfolio is inspired by the <a href="https://www.seanhalpin.xyz/about" target="_blank" rel="noopener">portfolio</a> of talented designer Seán and made with passion.
-                  Even though it has imperfections, it shows dedication. Check it out! &#x1F642;</p>
-                  <p style="font-size:medium">Code source: <a href="https://github.com/roma-rin/portfolio" target="_blank" rel="noopener">github.com/roma-rin/portfolio</a></p>
-              </div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work2" name="timeline-2024" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work2">Talk at 24th Colloque de la Recherche</label>
-                <span class="date">Feb. 8th</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content">
-                <p>
-                  I had the privilege to present and discuss my research, alongside renowned researchers, at the <a href="https://www.ligue-cancer.net/nos-actualites/24eme-colloque-national-de-la-recherche" target="_blank" rel="noopener">24th Colloque de la Recherche</a> organized by the Ligue Nationale Contre le Cancer. Two enriching days of varied talks in the unique site of the Couvent des Jacobins in Rennes.
-                  Many thanks to the Ligue for this opportunity, to all the donors, and to my team for their support in my thesis project.
-                  <iframe width="640" height="360" src="https://www.youtube.com/embed/i8p0J6aXDKk" title="24th Colloque de la Recherche video summary" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p style="font-size:medium">Video summary of the 24th Colloque de la Recherche, where I gave a talk on the role of circRNAs in cutaneous melanoma treatment resistance.<br>
-                  Ps: will you be able to find me? &#x1F440; <span style="color: transparent">At the forty-fifth second!</span>
-                </p>
-              </p>
-              </div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work3" name="timeline-2024" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work3">Pursuing a PhD after a master's degree in bioinformatics</label>
-                <span class="date">Feb. 6th</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content">
-                <p>
-                  Many thanks to the <a href="https://ebigo-rennes.jimdofree.com/" target="_blank" rel="noopener">e-BIGO association</a>, the educational team and the students of the Rennes Bio-Informatics Master's degree for inviting me to share my thesis experience. It was a pleasure to talk to the students and compare my experience with those of Nawad Hakim. All the best to the students in your future professional projects! &#x1F393;
-                  <a href="https://www.linkedin.com/posts/association-e-bigo_nous-tenons-%C3%A0-sinc%C3%A8rement-remercier-nos-2-activity-7161082089738563585-Uhhs?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener"><img class="img-news" src="img/news/pursing_phd.jpg" width="828" height="1172" alt="e-BIGO association thank-you post for the master's degree talk" loading="lazy"></a>
-                  </p>
-              </div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work4" name="timeline-2024" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work4">First scientific article published</label>
-                <span class="date">Feb. 1st</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content">
-                <p>
-                  Starting 2024 with great news! I'm thrilled to share that my <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">first scientific paper</a> as first author has just been published.
-                  Cirscan is an interactive Shiny application that automatically infers circRNA–miRNA–mRNA networks from human multi-level transcriptomic data in order to identify on a large scale, potential sponge mechanisms active in a specific condition.<br>
-                  This project constitutes a significant part of my thesis. A big thank you to the GEO research team and collaborators for their contributions to this project, with a special acknowledgment to the Ligue Nationale Contre le Cancer that funded my thesis project. &#129782;</p>
-                  <p style="font-size:medium">Fraboulet <i>et al.</i> "Cirscan: a shiny application to identify differentially active sponge mechanisms and visualize circRNA–miRNA–mRNA networks". BMC Bioinformatics, 2024. <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">https://doi.org/10.1186/s12859-024-05668-y</a>
-                </p>
-              </div>
-            </li>
-          </ul>
+    <!-- Publications & Projects -->
+    <section id="work" aria-labelledby="work-heading" data-screen-label="Projects"><div class="container" data-reveal><div class="section-head"><span class="eyebrow">Projects</span><h2 id="work-heading">What I've built and published<span class="dot">.</span></h2></div><div class="wa"><div class="wa__arch"><div class="sl__period"><span class="sl__from">Cirscan</span><span class="sl__to">— 2024</span></div><div class="wa__tags"><span class="tag">Thesis paper</span><span class="tag">BMC</span></div><div class="sl__body"><p class="sl__place">Sponge mechanisms in circRNA networks</p></div><a class="sl__toggle wa__arrow" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener" aria-label="Read the Cirscan paper (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div><div class="wa__arch"><div class="sl__period"><span class="sl__from">Cirscan</span><span class="sl__to">— 2024</span></div><div class="wa__tags"><span class="tag">Shiny app</span><span class="tag">R · Shiny</span></div><div class="sl__body"><p class="sl__place">The interactive tool behind the paper</p></div><a class="sl__toggle wa__arrow" href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener" aria-label="Open the Cirscan app (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div><div class="wa__arch"><div class="sl__period"><span class="sl__from">Portfolio</span><span class="sl__to">— 2024</span></div><div class="wa__tags"><span class="tag">Website</span><span class="tag">HTML · CSS · JS</span></div><div class="sl__body"><p class="sl__place">Designed and built from scratch</p></div><a class="sl__toggle wa__arrow" href="https://github.com/roma-rin/portfolio" target="_blank" rel="noopener" aria-label="View the portfolio source (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div></div></div></section>
+
+    <!-- News -->
+    <section id="news" aria-labelledby="news-heading" data-screen-label="News">
+      <div class="container" data-reveal>
+        <div class="section-head">
+          <span class="eyebrow">News</span>
+          <h2 id="news-heading">Where I've been lately<span class="dot">.</span></h2>
         </div>
 
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="panel-2023">2023<span class="accordion-chevron"></span></button>
-        <div class="accordion-panel" id="panel-2023">
-          <ul id="timeline">
-            <li>
-              <input class="timeline-radio" id="work5" name="timeline-2023" type="radio" checked>
-              <div class="relative">
-                <label class="timeline-label" for="work5">Visiting Student Researcher at Stanford University</label>
-                <span class="date">Sept - Dec</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content">
-                <p> I'm delighted to announce that I recently completed a four-month mobility as a Visiting Student Researcher at Stanford University in <a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">Salzman's team</a>!
-                  I'm grateful for the opportunity to dive into a renowned learning environment, connect with brilliant minds and gain professional and personal experience. It was also a great opportunity to discover the Califonian lifestyle and the beauty of the National Parks.<br>
-                  A big thank you to my research team, to the Collège Doctoral de Bretagne for their financial support, and to everyone who made this mobility possible. Excited to apply what I've learned into action! &#x1F1FA;&#x1F1F8;
-                  <span class="gallery">
-                    <figure class="gallery__item gallery__item--1">
-                      <img src="img/news/salzman_team.jpeg" class="gallery__img" width="1280" height="960" alt="Salzman lab team at Stanford" loading="lazy">
-                    </figure>
-                    <figure class="gallery__item gallery__item--2">
-                      <img src="img/news/stanford_garden.jpg" class="gallery__img" width="1204" height="1600" alt="Stanford campus garden" loading="lazy">
-                    </figure>
-                    <figure class="gallery__item gallery__item--3">
-                      <img src="img/news/msob_office.jpg" class="gallery__img" width="1600" height="1077" alt="MSOB office at Stanford" loading="lazy">
-                    </figure>
-                    <figure class="gallery__item gallery__item--4">
-                      <img src="img/news/stanford_portrait.jpg" class="gallery__img" width="1299" height="1600" alt="Portrait taken during the Stanford mobility" loading="lazy">
-                    </figure>
-                  </span>
-                </p>
-              </div>
-            </li>
-            <!--
-              The two entries below are placeholders awaiting real content
-              (kept out of the rendered page until filled in):
+        <div class="year-row"><span class="year-row__label">2024</span><span class="year-row__rule"></span></div>
 
-            <li>
-              <input class="timeline-radio" id="work6" name="timeline-2023" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work6">Assistant Professor</label>
-                <span class="date">Jan - Mar</span>
-                <span class="circle"></span>
+        <article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-portfolio">
+            <span class="entry__date">Jul 1</span><span class="entry__type"><span class="tag">Launch</span></span>
+            <span class="entry__main"><span class="entry__title">Portfolio deployment</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" id="entry-portfolio">
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>I'm excited to share my first website — my portfolio. Building it has been a great opportunity to learn and use HTML and CSS, and to show my ability to adapt to any language. It is inspired by the <a href="https://www.seanhalpin.xyz/about" target="_blank" rel="noopener">portfolio</a> of designer Seán, and made with passion.</p>
+                <p class="caption">Source code: <a href="https://github.com/roma-rin/portfolio" target="_blank" rel="noopener">github.com/roma-rin/portfolio</a></p>
               </div>
-              <div class="timeline-content">
-                <p>TODO: real content</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-colloque">
+            <span class="entry__date">Feb 8</span><span class="entry__type"><span class="tag">Talk</span></span>
+            <span class="entry__main"><span class="entry__title">Talk at the 24th Colloque de la Recherche</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" id="entry-colloque">
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>I had the privilege to present and discuss my research, alongside renowned researchers, at the <a href="https://www.ligue-cancer.net/nos-actualites/24eme-colloque-national-de-la-recherche" target="_blank" rel="noopener">24th Colloque de la Recherche</a> organized by the Ligue Nationale Contre le Cancer — two enriching days of varied talks in the unique setting of the Couvent des Jacobins in Rennes. Many thanks to the Ligue for this opportunity, to all the donors, and to my team for their support throughout my thesis project.</p>
+                <div class="media media--video">
+                  <iframe src="https://www.youtube-nocookie.com/embed/i8p0J6aXDKk" title="24th Colloque de la Recherche — video summary" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="caption">Video summary of the colloquium, where I gave a talk on the role of circRNAs in cutaneous melanoma treatment resistance. Can you spot me? Around the forty-fifth second.</p>
               </div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work7" name="timeline-2023" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work7">Article publication</label>
-                <span class="date">Jan</span>
-                <span class="circle"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-phd-talk">
+            <span class="entry__date">Feb 6</span><span class="entry__type"><span class="tag">Talk</span></span>
+            <span class="entry__main"><span class="entry__title">Pursuing a PhD after a master's degree in bioinformatics</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" id="entry-phd-talk">
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>Many thanks to the <a href="https://ebigo-rennes.jimdofree.com/" target="_blank" rel="noopener">e-BIGO association</a>, the educational team and the students of the Rennes Bioinformatics Master's degree for inviting me to share my thesis experience. It was a pleasure to talk with the students and to compare my path with that of Nawad Hakim. All the best to the students in their future projects.</p>
+                <div class="media media--shot">
+                  <a href="https://www.linkedin.com/posts/association-e-bigo_nous-tenons-%C3%A0-sinc%C3%A8rement-remercier-nos-2-activity-7161082089738563585-Uhhs" target="_blank" rel="noopener"><img src="img/news/pursing_phd.jpg" width="828" height="1172" alt="e-BIGO association thank-you post for the master's degree talk" loading="lazy"></a>
+                </div>
               </div>
-              <div class="timeline-content">
-                <p>TODO: real content</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-paper">
+            <span class="entry__date">Feb 1</span><span class="entry__type"><span class="tag">Paper</span></span>
+            <span class="entry__main"><span class="entry__title">First scientific article published</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" id="entry-paper">
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>Starting 2024 with great news: my <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">first scientific paper</a> as first author has been published. Cirscan is an interactive Shiny application that automatically infers circRNA–miRNA–mRNA networks from human multi-level transcriptomic data, in order to identify potential sponge mechanisms active in a specific condition at large scale.</p>
+                <p>This project constitutes a significant part of my thesis. A big thank you to the GEO research team and collaborators for their contributions, with a special acknowledgment to the Ligue Nationale Contre le Cancer, which funded my thesis project.</p>
+                <p class="caption">Fraboulet <em>et al.</em> “Cirscan: a shiny application to identify differentially active sponge mechanisms and visualize circRNA–miRNA–mRNA networks”. BMC Bioinformatics, 2024. <a href="https://doi.org/10.1186/s12859-024-05668-y" target="_blank" rel="noopener">doi.org/10.1186/s12859-024-05668-y</a></p>
               </div>
-            </li>
-            -->
-          </ul>
+            </div>
+          </div>
+        </article>
+
+        <div class="news-older" id="news-older" hidden><div class="year-row"><span class="year-row__label">2023</span><span class="year-row__rule"></span></div>
+
+        <article class="entry">
+          <button type="button" class="entry__head" aria-expanded="false" aria-controls="entry-stanford">
+            <span class="entry__date">Sep – Dec</span><span class="entry__type"><span class="tag">Mobility</span></span>
+            <span class="entry__main"><span class="entry__title">Visiting Student Researcher at Stanford University</span></span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <div class="entry__panel" id="entry-stanford">
+            <div class="entry__inner">
+              <div class="entry__body">
+                <p>I completed a four-month mobility as a Visiting Student Researcher at Stanford University, in <a href="https://salzmanlab.stanford.edu/" target="_blank" rel="noopener">Salzman's team</a>. I'm grateful for the opportunity to dive into a renowned learning environment, connect with brilliant minds and gain both professional and personal experience — and to discover the Californian lifestyle and the beauty of the National Parks.</p>
+                <p>A big thank you to my research team, to the Collège Doctoral de Bretagne for their financial support, and to everyone who made this mobility possible.</p>
+                <div class="gallery">
+                  <figure><img src="img/news/salzman_team.jpeg" width="1280" height="960" alt="Salzman lab team at Stanford" loading="lazy" decoding="async"></figure>
+                  <figure><img src="img/news/stanford_garden.jpg" width="1054" height="1400" alt="Stanford campus garden" loading="lazy" decoding="async"></figure>
+                  <figure><img src="img/news/msob_office.jpg" width="1400" height="942" alt="MSOB office at Stanford" loading="lazy" decoding="async"></figure>
+                  <figure><img src="img/news/stanford_portrait.jpg" width="1137" height="1400" alt="Portrait taken during the Stanford mobility" loading="lazy" decoding="async"></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
         </div>
-
-        <!--
-          2022 accordion — placeholder entries only, awaiting real content:
-
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="panel-2022">2022<span class="accordion-chevron"></span></button>
-        <div class="accordion-panel" id="panel-2022">
-          <ul id="timeline">
-            <li>
-              <input class="timeline-radio" id="work8" name="timeline-2022" type="radio" checked>
-              <div class="relative">
-                <label class="timeline-label" for="work8">Portfolio deployment</label>
-                <span class="date">May. 15th</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content"><p>TODO: real content</p></div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work9" name="timeline-2022" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work9">Talk Ligue Day</label>
-                <span class="date">Feb. 8th</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content"><p>TODO: real content</p></div>
-            </li>
-            <li>
-              <input class="timeline-radio" id="work10" name="timeline-2022" type="radio">
-              <div class="relative">
-                <label class="timeline-label" for="work10">Article publication</label>
-                <span class="date">Jan. 1st</span>
-                <span class="circle"></span>
-              </div>
-              <div class="timeline-content"><p>TODO: real content</p></div>
-            </li>
-          </ul>
-        </div>
-        -->
+        <button type="button" class="news-more" aria-expanded="false" aria-controls="news-older"><span>Older news</span><svg class="entry__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
       </div>
     </section>
 
-    <!-- *** Contact *** -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="contact" data-reveal>
-        <h2 class="visually-hidden" id="contact-heading">Contact</h2>
-        <div class="contact-picture-container">
-          <img src="img/rf_icon.png" width="300" height="300" alt="" loading="lazy">
-        </div>
-        <div class="contact-links">
-          <a href="mailto:fraboulet.rosemarie@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            fraboulet.rosemarie@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/r-mfraboulet/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v1.98h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V23h-4V8.5z"/></svg>
-            linkedin.com/in/r-mfraboulet
-          </a>
-          <a href="https://github.com/roma-rin" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39s1.97.13 2.89.39c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.78 1.08.78 2.18 0 1.58-.01 2.85-.01 3.24 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-            github.com/roma-rin
-          </a>
-        </div>
-      </div>
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" data-screen-label="Contact">
+      <div class="container" data-reveal><div class="section-head"><span class="eyebrow">Contact</span><h2 id="contact-heading">Where we can talk<span class="dot">.</span></h2></div><div class="cv-b"><div class="contact-mark cv-b__logo" aria-hidden="true"><img src="img/logo.svg" alt="" width="150" height="146"></div><div class="cp-b"><div class="cp-tags"><span class="tag">Paris, FR</span><span class="tag"><time id="cpTime">--:--</time>&nbsp;local time</span></div><div class="cp-b__mailrow"><a class="cp-b__mail" href="mailto:fraboulet.rosemarie@gmail.com">fraboulet.rosemarie<wbr>@gmail.com</a><button type="button" class="cp-copy" data-copy="fraboulet.rosemarie@gmail.com" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="cp-copy__txt">Copy</span></button></div><div class="cp-b__row"><a href="https://www.linkedin.com/in/r-mfraboulet/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg><span>LinkedIn</span><svg class="cp-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a><a href="https://github.com/roma-rin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.9-2.3c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.4 0C6.1 1.4 5 1.7 5 1.7a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 3.5 8.7c0 5 3 6.2 6 6.5a3 3 0 0 0-.9 2.3V21"></path></svg><span>GitHub</span><svg class="cp-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div></div></div></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Rose-Marie Fraboulet. Built by hand with HTML, CSS &amp; JavaScript.</p>
+    <div class="container">
+      <div class="ft"><p>&copy; <span id="year">2026</span> Rose-Marie Fraboulet</p><a class="ft__top" href="#top">Back to top<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+    </div>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script src="js/main.js" defer></script>
-  <script src="js/accordion.js" defer></script>
 </body>
 </html>

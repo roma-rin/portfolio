@@ -1,6 +1,6 @@
 /* =========================================================
    Rose Fraboulet — portfolio
-   Chaleureux organisé : pêche + Sonder conservés, orange dosé.
+   Warm and structured: peach + Sonder kept, orange used sparingly.
    ========================================================= */
 
 /* --- 0. Reset & base --- */
@@ -16,16 +16,16 @@ button{font:inherit;cursor:pointer;color:inherit}
 
 /* --- 1. Tokens --- */
 :root{
-  /* palette brute */
+  /* raw palette */
   --orange-500:#f47500;--orange-600:#d96704;--orange-ink:#a8500a;--orange-soft:#fdebda;
-  /* surfaces claires */
+  /* light surfaces */
   --bg:#fdf7f0;--bg-tint:#fbf8f5;
   --surface:#fffcf8;--surface-2:#fbf3ea;
-  /* encre aubergine-rose — chaud, s'accorde à l'orange */
+  /* aubergine-pink ink: warm, pairs with the orange */
   --ink-900:#4a1f38;--ink-700:#61394f;--ink-500:#8a5c3c;--hairline:#e8d9cd;
-  /* camel — la couleur secondaire (filets, rail, mentions) */
+  /* camel: the secondary color (rules, rail, mentions) */
   --camel:#bc7f5b;--camel-deep:#8a5c3c;
-  /* sémantique */
+  /* semantic */
   --text-title:var(--ink-900);--text-body:var(--ink-700);--text-muted:var(--ink-500);
   --accent:var(--orange-500);--accent-text:var(--orange-ink);--accent-soft:var(--orange-soft);
   --on-accent:#4a1f38;
@@ -34,28 +34,28 @@ button{font:inherit;cursor:pointer;color:inherit}
   --shadow-md:0 10px 30px -12px rgba(74,31,56,.24),0 2px 6px rgba(74,31,56,.08);
   --grad-warm:linear-gradient(100deg,#f47500 0%,#e2680a 50%,#c25405 100%);
   --on-grad:#fff8f1;
-  /* couleurs de marque appliquées au site */
+  /* brand colors applied to the site */
   --name:#f47500;
   --band-bg:#fbe1cc;--band-ink:#4a1f38;--band-body:#5c3346;--band-muted:#7a4a3a;--band-line:#efcdb4;--band-surface:#fff6ee;
   --deep-bg:#4a1f38;--deep-ink:#fdf1e8;--deep-body:#ecd3dd;--deep-accent:#ff9a3d;
   --cap-bg:#f47500;--cap-ink:#3a1026;
   --tag-bg:#fbe1cc;--tag-ink:#7a3a12;
   --dot-2:#bc7f5b;--dot-3:#4a1f38;
-  /* halos de lumière du fond */
+  /* background light glows */
   --glow-1:rgba(244,117,0,.24);--glow-2:rgba(188,127,91,.30);--glow-3:rgba(253,196,140,.45);
-  /* type : Bodoni Moda en display, Sonder réservé aux initiales */
+  /* type: Sonder for display */
   --font-display:'SonderFont',Georgia,serif;
   --font-accent:'SonderFont',Georgia,serif;
   --font-body:'Hanken Grotesk','GroteskFont',system-ui,-apple-system,sans-serif;
-  /* rôles typographiques */
+  /* typographic roles */
   --fs-hero:clamp(3.6rem,11vw,7.5rem);
   --fs-h2:clamp(2.1rem,5vw,3.2rem);
   --fs-year:1.3rem;
   --fs-title:1.15rem;
   --fs-label:.72rem;
-  /* rayons : une seule échelle */
+  /* radii: a single scale */
   --r-sm:8px;--r-md:16px;--r-lg:24px;--r-pill:999px;
-  /* espace */
+  /* spacing */
   --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.5rem;--s6:2rem;--s7:3rem;--s8:4.5rem;
   --gutter:clamp(1.25rem,5vw,4.5rem);
   --maxw:1080px;
@@ -102,7 +102,7 @@ section{padding-block:clamp(3.5rem,9vh,6rem);scroll-margin-top:96px}
 .eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);background:var(--accent-soft);padding:5px 12px;border-radius:var(--r-pill);margin-bottom:var(--s4)}
 .section-head{margin-bottom:var(--s7);padding-bottom:var(--s4);border-bottom:1px solid var(--hairline)}
 .section-head h2{font-family:var(--font-display);font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.01em;color:var(--text-title)}
-/* Sonder ne sert qu'aux majuscules : la coupure blanche reste sur chaque capitale */
+/* Sonder is only used for capitals: the white gap stays on each capital letter */
 .versal{font-family:var(--font-accent)}
 .section-head p{margin-top:var(--s3);color:var(--text-muted);max-width:52ch;font-size:.97rem}
 
@@ -163,13 +163,13 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .nav-link.active{background:var(--accent);color:var(--on-accent);font-weight:500}
 .label{font-family:var(--font-body);font-weight:500;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);font-variant-numeric:tabular-nums}
 
-/* --- 6. Panneau : composant partagé Background + Work --- */
+/* --- 6. Panel: component shared by Background + Work --- */
 .sl__panel,.wa__arch{position:relative;display:flex;flex-direction:column;height:var(--panel-h);padding:var(--panel-pad);border-radius:var(--r-md);border:1px solid var(--hairline);background:color-mix(in srgb,var(--surface) 60%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow:hidden;color:inherit;text-decoration:none;transition:border-color var(--t)}
 .sl__panel::after,.wa__arch::after{content:"";position:absolute;left:var(--panel-pad);right:var(--panel-pad);bottom:0;height:2px;border-radius:2px;background:var(--line-accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--ease-out)}
 .sl__panel:hover,.wa__arch:hover,.wa__arch:focus-visible,.sl__panel.is-active{border-color:color-mix(in srgb,var(--accent) 45%,var(--hairline))}
 .sl__panel:hover::after,.wa__arch:hover::after,.wa__arch:focus-visible::after,.sl__panel.is-active::after{transform:scaleX(1)}
 .sl__num,.wa__num{position:absolute;top:var(--panel-pad);right:var(--panel-pad);font-weight:500;font-size:var(--fs-label);letter-spacing:.12em;color:var(--text-muted);font-variant-numeric:tabular-nums}
-/* gros titre display en haut, contenu en bas */
+/* big display title on top, content at the bottom */
 .sl__period{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding-right:2.5rem}
 .sl__from,.wa__title{font-family:var(--font-display);font-weight:400;font-size:var(--fs-panel);line-height:.95;letter-spacing:-.02em;color:var(--text-title)}
 .sl__to{font-family:var(--font-display);font-size:1.1rem;color:var(--text-muted)}
@@ -181,7 +181,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__place a:hover{color:var(--accent-text);text-decoration-color:currentColor}
 .sl__sub{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s3);align-items:baseline;margin-top:var(--s3);padding-top:var(--s3);border-top:1px dashed color-mix(in srgb,var(--dot-2) 55%,transparent)}
 .sl__sub-year{font-family:var(--font-display);font-size:1.1rem;color:var(--text-title)}
-/* Work : même grille de contenu */
+/* Work: same content grid */
 .wa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
 .wa__icon{display:none}
 .wa__kind{align-self:flex-start;max-width:calc(100% - 2.5rem);font-weight:500;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);padding-right:2.5rem}
@@ -195,7 +195,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .js-ready [data-reveal].is-visible .wa__arch:nth-child(2){transition-delay:.1s}
 .js-ready [data-reveal].is-visible .wa__arch:nth-child(3){transition-delay:.2s}
 
-/* --- 7. Background : rangée à faire glisser + barre 01 → 04 --- */
+/* --- 7. Background: scrollable row + 01 → 04 progress bar --- */
 .sl__bar{display:flex;align-items:center;gap:var(--s5);margin-bottom:var(--s4)}
 .sl__steps{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
 .sl__step{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:8px 0;background:none;border:0;cursor:pointer;color:var(--text-muted)}
@@ -245,7 +245,11 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .media--shot{max-width:360px}
 .media--shot img{width:100%;height:auto}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3);margin-top:var(--s5);margin-inline:auto;max-width:620px}
-.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);aspect-ratio:4/3}
+.gallery img{width:100%;height:auto;border-radius:var(--r-md)}
+.gallery figure{align-self:start}
+.gallery--match figure{align-self:stretch;overflow:hidden}
+.gallery--match img{height:100%;object-fit:cover}
+.gallery--prize{grid-template-columns:1.3fr 1fr;align-items:center}
 
 /* --- 9. Contact & footer --- */
 .contact-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
@@ -259,7 +263,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .site-footer{padding:var(--s6) 0 var(--s7);border-top:1px solid var(--hairline)}
 .site-footer p{text-align:center;font-size:var(--fs-meta);color:var(--text-muted)}
 
-/* --- 10. Accueil : photo + présentation dans un écran --- */
+/* --- 10. Home: photo + intro within one screen --- */
 .hero-name{font-size:var(--fs-hero)}
 @media (min-width:901px){
  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(5.5rem,11vh,7rem);padding-bottom:clamp(2.5rem,7vh,4.5rem)}
@@ -298,7 +302,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
  .gallery{grid-template-columns:1fr}
  .media--video{max-width:100%}
 }
-/* --- 12. Sous-catégories : la flèche bascule le contenu du carré --- */
+/* --- 12. Sub-categories: the arrow flips the card's content --- */
 .sl__faces{flex:1;display:grid;min-height:0}
 .sl__face{grid-area:1/1;display:flex;flex-direction:column;min-height:0;transition:opacity .35s ease,translate .45s var(--ease-out),visibility 0s linear 0s}
 .sl__face--sub{opacity:0;translate:0 10px;visibility:hidden;transition:opacity .35s ease,translate .45s var(--ease-out),visibility 0s linear .45s}
@@ -314,14 +318,14 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__panel.is-flipped .sl__more svg{transform:rotate(-90deg);translate:0 0}
 @media (prefers-reduced-motion:reduce){.sl__track{scroll-behavior:auto}}
 
-/* --- 13. Carrés épurés --- */
+/* --- 13. Stripped-down cards --- */
 .sl__panel::after,.wa__arch::after{display:none}
 .sl__num,.wa__num{display:none}
 .sl__period,.wa__kind{padding-right:0}
 .sl__step{gap:0;padding:10px 0}
 .sl__step span{display:none}
 
-/* --- 14. Titres alignés, ligne continue, rangée fixe --- */
+/* --- 14. Aligned titles, continuous line, fixed row --- */
 .sl__period{height:3rem;flex-wrap:nowrap}
 .sl__body{margin-top:4.25rem}
 .sl__line{position:relative;flex:1;height:3px;border-radius:3px;background:color-mix(in srgb,var(--dot-2) 30%,transparent)}
@@ -331,7 +335,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 @media (hover:hover) and (pointer:fine){.sl__track{overflow-x:hidden;scroll-snap-type:none}}
 @media (max-width:680px){.sl__body{margin-top:3.25rem}}
 
-/* --- 15. Carrés plus compacts, flèches sans cercle --- */
+/* --- 15. More compact cards, arrows with no circle --- */
 :root{--panel-h:260px}
 .sl__body{margin-top:2.5rem}
 @media (max-width:900px){:root{--panel-h:250px}}
@@ -341,7 +345,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__btn:hover:not(:disabled){color:var(--accent)}
 .sl__more:hover,.sl__more:focus-visible{background:transparent}
 
-/* --- 16. Plusieurs sous-catégories : la flèche fait défiler, des points situent --- */
+/* --- 16. Several sub-categories: the arrow scrolls, dots locate --- */
 .sl__face,.sl__face--sub{opacity:0;translate:0 10px;visibility:hidden;transition:opacity .35s ease,translate .45s var(--ease-out),visibility 0s linear .45s}
 .sl__face.is-shown{opacity:1;translate:0 0;visibility:visible;transition:opacity .35s ease .08s,translate .45s var(--ease-out) .08s,visibility 0s}
 .sl__panel.is-sub .sl__more{color:var(--accent)}
@@ -349,7 +353,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__more.is-on{color:var(--accent)}
 .sl__panel.is-flipped .sl__more svg,.sl__more svg{transform:rotate(90deg)}
 .sl__more.is-on svg{transform:rotate(-90deg);translate:0 0}
-/* haut = précédent, bas = suivant */
+/* up = previous, down = next */
 .sl__more--up,.sl__more--down{margin-left:-18px;height:24px;transition:color var(--t-fast),bottom .4s var(--ease-out),opacity .3s ease,visibility 0s}
 .sl__more--down svg,.sl__more--down.is-on svg{transform:rotate(90deg)}
 .sl__more--up svg,.sl__more--up.is-on svg{transform:rotate(-90deg)}
@@ -362,7 +366,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__panel.is-end .sl__more--down{opacity:0;visibility:hidden;transition:color var(--t-fast),bottom .4s var(--ease-out),opacity .3s ease,visibility 0s linear .3s}
 .sl__more:disabled{cursor:default}
 
-/* --- 17. Sous-expériences : un dépliant dans le carré --- */
+/* --- 17. Sub-experiences: a fold-out within the card --- */
 .sl__toggle{position:absolute;left:50%;bottom:calc(var(--panel-pad) - 4px);margin-left:-18px;display:grid;place-items:center;width:36px;height:24px;padding:0;border:0;border-radius:var(--r-sm);background:transparent;color:var(--accent-text);transition:color var(--t-fast)}
 .sl__toggle::before{content:"";position:absolute;inset:-10px -4px}
 .sl__toggle svg{width:22px;height:22px;stroke-width:1.5;transform:rotate(90deg);transition:transform .45s var(--ease-out),translate .3s var(--ease-out)}
@@ -372,7 +376,10 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__panel.is-open .sl__toggle:hover svg{translate:0 -2px}
 .sl__face--list{justify-content:flex-start;gap:var(--s3)}
 .sl__ctx{font-weight:500;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
-.sl__list{display:flex;flex-direction:column;gap:var(--s4);overflow-y:auto;scrollbar-width:thin;min-height:0}
+.sl__list{display:flex;flex-direction:column;gap:var(--s4);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--accent-text) transparent;min-height:0;padding-right:var(--s3)}
+.sl__list::-webkit-scrollbar{width:5px}
+.sl__list::-webkit-scrollbar-track{background:transparent}
+.sl__list::-webkit-scrollbar-thumb{background:var(--accent-text);border-radius:3px}
 .sl__list>li{display:grid;grid-template-columns:3.1rem minmax(0,1fr);gap:var(--s3);align-items:baseline}
 .sl__list-year{font-family:var(--font-display);font-size:1.25rem;line-height:1;color:var(--text-title)}
 .sl__list-role{font-weight:600;font-size:var(--fs-title);line-height:1.3;color:var(--text-title);text-wrap:pretty}
@@ -399,14 +406,14 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 @media (max-width:680px){:root{--panel-h:285px}}
 .sl__face--list .sl__place{text-wrap:balance}
 
-/* --- 18. Secondaire = même typographie que le principal --- */
+/* --- 18. Secondary = same typography as the main entry --- */
 .sl__panel.is-open:not(.has-multi){padding-top:var(--panel-pad);padding-bottom:calc(var(--panel-pad) + 30px)}
 .sl__face--list:not(:has(.sl__list)){gap:0}
 .sl__list-year{font-size:2rem;line-height:.95;letter-spacing:-.02em;margin-bottom:4px}
 .sl__list-role{font-size:var(--fs-title);line-height:1.3}
 .sl__face--list .sl__place{font-size:var(--fs-meta);line-height:1.45}
 
-/* --- 19. PhD aéré, années à la taille principale --- */
+/* --- 19. PhD more spacious, years at the main size --- */
 :root{--panel-h:312px}
 @media (max-width:900px){:root{--panel-h:312px}}
 @media (max-width:680px){:root{--panel-h:318px}}
@@ -414,7 +421,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__list-year{font-size:var(--fs-panel);margin-bottom:6px}
 .sl__panel.is-open.has-multi{padding-top:var(--panel-pad)}
 
-/* --- 20. Titres de section dans la voix du nom --- */
+/* --- 20. Section titles in the name's color --- */
 .section-head h2,.contact-title{color:var(--name)}
 .section-head h2 .dot,.contact-title .dot{color:var(--ink-900)}
 .sl__panel.is-now .sl__from,.sl__panel.is-now .sl__to{color:var(--text-title)}
@@ -422,7 +429,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .wa:has(.wa__arch:not(:first-child):hover) .wa__arch:first-child:not(:hover){border-color:var(--hairline)}
 @media (min-width:681px){.navbar-actions{display:none}}
 
-/* --- 21. Projects : même langage que Background --- */
+/* --- 21. Projects: same visual language as Background --- */
 .wa__arch{padding-bottom:calc(var(--panel-pad) + 30px)}
 .wa__arch .sl__from{white-space:nowrap}
 .wa__tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:var(--s2)}
@@ -433,20 +440,20 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .wa__tags{flex-wrap:nowrap;overflow:hidden}
 .wa__tags .tag{white-space:nowrap}
 
-/* tags sous le titre, flèche vers le bas */
+/* tags below the title, arrow pointing down */
 .wa__tags{margin-top:var(--s3)}
 .wa__arch .sl__body{margin-top:var(--s5)}
 .wa__arch .wa__arrow svg{transform:rotate(90deg)}
 .wa__arch:hover .wa__arrow svg,.wa__arch:focus-visible .wa__arrow svg{translate:0 3px}
 
-/* Projects : carrés plus compacts, flèche diagonale, encadré au survol seulement */
+/* Projects: more compact cards, diagonal arrow, border only on hover */
 .wa__arch{height:236px}
 .wa__arch .wa__arrow svg{transform:rotate(-45deg)}
 .wa__arch:hover .wa__arrow svg,.wa__arch:focus-visible .wa__arrow svg{translate:2px -2px}
 .wa__arch:first-child:not(:hover):not(:focus-visible){border-color:var(--hairline)}
 .wa__arch{height:272px}
 
-/* Projects : seul la flèche est un lien */
+/* Projects: only the arrow is a link */
 .wa__arrow{pointer-events:auto;text-decoration:none}
 .wa__arch:hover .wa__arrow{color:var(--accent-text)}
 .wa__arch:hover .wa__arrow svg{translate:0 0}
@@ -454,7 +461,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .wa__arrow:hover svg,.wa__arrow:focus-visible svg{translate:2px -2px!important}
 .wa__arch:has(.wa__arrow:focus-visible){border-color:color-mix(in srgb,var(--accent) 45%,var(--hairline))}
 
-/* --- 22. Hauteur commune Background + Projects --- */
+/* --- 22. Shared height for Background + Projects --- */
 :root{--panel-h:292px}
 @media (max-width:900px){:root{--panel-h:292px}}
 @media (max-width:680px){:root{--panel-h:300px}}
@@ -462,20 +469,20 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .sl__list{gap:1.375rem}
 .sl__list-year{margin-bottom:4px}
 
-/* --- 23. Une section par écran (ordinateur) --- */
+/* --- 23. One section per screen (desktop) --- */
 @media (min-width:901px){
  #background,#work,#news,#contact{min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-margin-top:0;padding-top:clamp(5.5rem,11vh,7rem);padding-bottom:clamp(2.5rem,7vh,4.5rem)}
  #background>.container,#work>.container,#news>.container,#contact>.container{width:100%}
  #contact{min-height:calc(100svh - 7rem)}
 }
 
-/* --- 24. News harmonisé avec Background --- */
+/* --- 24. News brought in line with Background --- */
 .year-row__label{font-size:var(--fs-panel);line-height:.95;letter-spacing:-.02em;color:var(--text-title)}
 .year-row{margin:var(--s7) 0 var(--s3)}
 .year-row:first-of-type{margin-top:0}
 .entry__date{font-family:var(--font-display);font-weight:400;font-size:1.1rem;letter-spacing:0;text-transform:none;color:var(--text-muted)}
 
-/* --- 25. News : tags, flèche commune, médias homogènes, archives --- */
+/* --- 25. News: tags, shared arrow, consistent media, archive --- */
 .entry__head{gap:var(--s4)}
 .entry__tag{flex:0 0 auto}
 .entry__chev{flex:0 0 auto;width:22px;height:22px;margin:0;border:0;color:var(--accent-text);transform:rotate(90deg);transition:transform .45s var(--ease-out),color var(--t-fast)}
@@ -492,7 +499,7 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 .news-older .year-row:first-child{margin-top:var(--s7)}
 @media (max-width:680px){.entry__tag{order:-1}.entry__head{flex-wrap:wrap}.entry__date{width:auto;order:-2}}
 
-/* News : tag sous le titre, comme Projects */
+/* News: tag below the title, like Projects */
 .entry__head{align-items:flex-start}
 .entry__date{padding-top:2px}
 .entry__main{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
@@ -501,15 +508,15 @@ section{padding-block:clamp(4rem,10vh,6.5rem)}
 @media (max-width:680px){.entry__tag{order:0}.entry__head{flex-wrap:nowrap}.entry__date{order:0;width:64px}}
 .entry__head{align-items:center}.entry__date{padding-top:0}.entry__chev{margin-top:0}
 
-/* News : colonne de type ; Contact : en-tête commun */
+/* News: type column; Contact: shared header */
 .entry__type{flex:0 0 auto;width:84px;font-size:var(--fs-meta);color:var(--text-muted)}
 .contact-grid{align-items:center}
 @media (max-width:680px){.entry__head{flex-wrap:wrap}.entry__date{width:auto}.entry__type{width:auto}.entry__type::before{content:"· ";}.entry__title{flex-basis:100%;order:3}.entry__chev{order:2;margin-left:auto}}
-.entry__type{width:96px;display:flex}
+.entry__type{width:96px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 @media (max-width:680px){.entry__type{width:auto}.entry__type::before{content:none}}
 
 
-/* --- 26. Contact : adresse en vedette --- */
+/* --- 26. Contact: address front and center --- */
 .cp-diag{width:16px;height:16px;flex-shrink:0;transform:rotate(-45deg);color:var(--accent-text);transition:translate var(--t-fast),color var(--t-fast)}
 a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 .cp-lede{color:var(--text-body);max-width:46ch;text-wrap:pretty}
@@ -530,7 +537,7 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 .cp-copy:hover{color:var(--accent-text);border-color:color-mix(in srgb,var(--accent) 45%,var(--hairline))}
 .cp-copy.is-done{color:var(--accent-text);border-color:var(--accent)}
 .cp-b__row{margin-top:var(--s2)}
-/* Contact harmonisé : tags + e-mail en texte courant */
+/* Contact brought in line: tags + e-mail as running text */
 .cp-tags{display:flex;flex-wrap:wrap;gap:var(--s2)}
 .cp-tags time{font-variant-numeric:tabular-nums}
 .cp-b__mail{font-family:var(--font-body);font-weight:600;font-size:var(--fs-title);line-height:1.3;color:var(--text-title);text-decoration:underline;text-decoration-color:var(--hairline);text-decoration-thickness:1px;text-underline-offset:5px}
@@ -539,14 +546,14 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 .cp-b__row{margin-top:0}
 .cp-b__row a{font-size:var(--fs-meta);color:var(--text-muted)}
 .cp-b__row a:hover{color:var(--text-title)}
-/* Footer : copyright + retour en haut */
+/* Footer: copyright + back to top */
 .ft{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap}
 .site-footer .ft p{text-align:left}
 .ft__top{display:inline-flex;align-items:center;gap:var(--s2);padding:8px 0;font-size:var(--fs-meta);color:var(--text-muted);text-decoration:none;transition:color var(--t-fast)}
 .ft__top svg{width:16px;height:16px;color:var(--accent-text);transform:rotate(-90deg);transition:translate var(--t-fast)}
 .ft__top:hover{color:var(--text-title)}
 .ft__top:hover svg{translate:0 -2px}
-/* Contact : logo en filigrane */
+/* Contact: logo as watermark */
 .cv-b{position:relative;overflow:hidden;padding:var(--s4) 0 var(--s6)}
 .cv-b__logo{position:absolute;right:-4%;top:50%;translate:0 -50%;width:clamp(220px,32vw,380px);opacity:.14;pointer-events:none}
 .cv-b .cp-b{position:relative;max-width:620px}
@@ -561,7 +568,7 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 .cv-b{display:flex;align-items:center;gap:clamp(2rem,5vw,4rem)}
 .cv-b__logo{position:static;translate:none;flex:0 0 auto}
 }
-/* Contact harmonisé */
+/* Contact brought in line */
 .cv-b{padding:0;gap:var(--s7)}
 .cv-b__logo{width:clamp(140px,15vw,190px);opacity:1}
 .cv-b__logo img{display:block;width:100%;height:auto}
@@ -570,7 +577,7 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 @media (max-width:680px){.cv-b{gap:var(--s5);align-items:flex-start}.cv-b__logo{width:96px;margin:0}}
 .cv-b__logo{width:clamp(180px,20vw,260px)}
 @media (max-width:680px){.cv-b__logo{width:128px}}
-/* --- 27. Mobile : libellé de section + accueil centré --- */
+/* --- 27. Mobile: section label + centered hero --- */
 .nav-current{display:none}
 @media (max-width:680px){
  .nav-current{display:block;order:0;padding:6px 10px;font-weight:500;font-size:.93rem;color:var(--accent-text);transition:opacity var(--t-fast)}
@@ -580,7 +587,7 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
  .portrait{justify-self:center;margin-inline:auto;width:min(78%,300px)}
  .intro p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:wrap}
 }
-/* Mobile : contact logo à gauche, infos à droite */
+/* Mobile: contact logo on the left, info on the right */
 @media (max-width:680px){
  .cv-b{flex-direction:row;align-items:center;gap:var(--s4)}
  .cv-b__logo{position:static;translate:none;flex:0 0 auto;width:92px;margin:0}
@@ -598,14 +605,22 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
 @media (max-width:680px){.cv-b .cp-b__mail{overflow-wrap:normal;word-break:normal;font-size:.92rem;line-height:1.35}.cv-b .cp-b__mailrow{flex-direction:column;align-items:flex-start}}
 @media (max-width:680px){.cv-b .cp-copy{display:none}}
 @media (max-width:680px){.entry__main{flex-basis:100%;order:3}}
-/* Contact : logo calé sur la hauteur du texte */
+/* Contact: logo height pinned to the text block's height */
 .cv-b{align-items:center!important}.cv-b .cp-b{align-self:center}
 .cv-b__logo{width:auto!important;flex:0 0 auto;display:flex;align-items:center}
 .cv-b__logo img{height:var(--cv-h,150px);width:auto!important;max-width:none}
 .cv-b__logo{align-self:center}.cv-b__logo img{display:block}
-/* En dessous de 680px l'e-mail peut passer sur deux lignes : --cv-h grossit alors
-   trop pour suivre le texte, et comme la largeur du logo suit sa hauteur, il déborde. */
+/* Below 680px the e-mail can wrap to two lines: --cv-h then grows too much
+   to follow the text, and since the logo's width follows its height, it overflows. */
 @media (max-width:680px){.cv-b__logo{width:92px!important}.cv-b__logo img{height:auto!important}}
-/* Desktop/tablette : infos à gauche, logo à droite, étalés sur toute la largeur du container
-   (comme Background/Projects), plutôt que groupés et collés au même endroit. */
+/* Desktop/tablet: info on the left, logo on the right, spread across the full
+   width of the container (like Background/Projects), rather than grouped together. */
 @media (min-width:681px){.cv-b{justify-content:space-between;gap:clamp(2rem,5vw,4rem)}.cv-b .cp-b{order:1}.cv-b__logo{order:2}}
+.news-poster-link{display:inline-flex;align-items:center;gap:var(--s2);color:var(--accent-text);text-decoration:none}
+.news-poster-link:hover{color:var(--accent)}
+/* News: text on the left, photo on the right for single-image entries (otherwise the photo stays small, stacked under the text) */
+@media (min-width:901px){.entry__body:has(.media--shot){display:grid;grid-template-columns:1fr auto;gap:var(--s6);align-items:start;max-width:none}
+.entry__body:has(.media--shot) .media--shot{margin-top:0}
+.entry__body:has(.media--shot) .caption{grid-column:1/-1}}
+.media--shot{max-width:380px}
+.media--shot--sm{max-width:290px}

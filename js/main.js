@@ -86,7 +86,7 @@
   }, { passive: true });
   spy();
 
-  /* ---- Background slider : une étape active à la fois ---- */
+  /* ---- Background slider: one active step at a time ---- */
   document.querySelectorAll("[data-slider]").forEach(function (sl) {
     var track = sl.querySelector("[data-sl-track]"), panels = [].slice.call(track.querySelectorAll(".sl__panel")),
         steps = [].slice.call(sl.querySelectorAll("[data-sl-step]")),

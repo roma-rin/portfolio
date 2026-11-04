@@ -49,4 +49,4 @@ Rose is rewriting the site's text herself (with help) to reposition from "bioinf
 - `.entry__type` is now `flex-direction:column` (was row) so a second tag (e.g. Stanford's "Mobility" + "Award") stacks instead of overflowing the fixed 96px column — safe for existing single-tag entries too.
 
 ## Deploy
-Static hosting — publish the repo root as-is (no build step). Do not push or deploy without being asked; the user handles git pushes themselves.
+Each push to `main` runs `.github/workflows/build.yml`, which builds the `Dockerfile` (nginx + site) and pushes `ghcr.io/roma-rin/portfolio` tagged `latest` and with the commit sha. The package must stay public so Florian's server can pull it without credentials. The workflow builds only, it does not deploy. The `Dockerfile` copies an explicit file list: never copy the repo root, which holds the git-ignored `.env` with PostHog secret keys. A new top-level site folder must be added to that list. Do not push or deploy without being asked; the user handles git pushes themselves.

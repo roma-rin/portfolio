@@ -8,3 +8,4 @@ COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/
 COPY font/ /usr/share/nginx/html/font/
 COPY img/ /usr/share/nginx/html/img/
+COPY cv/ /usr/share/nginx/html/cv/

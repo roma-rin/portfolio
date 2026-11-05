@@ -32,7 +32,7 @@ Single-page site, plain HTML/CSS/JS, no build step, no framework. Open `index.ht
   - When a photo looks mis-framed, the fastest fix is asking Rose to re-crop and replace the file herself (Windows Photos' crop tool) rather than fighting it with `object-position` — a round of that guessing (prize ceremony photo) went the wrong direction twice before she just re-cropped it herself.
 
 ## Open items
-1. Add the final domain to Open Graph/canonical tags, plus `sitemap.xml` and `robots.txt`, once deployment is decided (target infra: VM → container → Nginx → Portainer).
+1. Production is https://portfolio.romarin.tech/ (behind Cloudflare, which already serves a managed `robots.txt`). `og:url`, `og:image` (absolute URL, required for LinkedIn/WhatsApp previews) and `canonical` use it. A `sitemap.xml` is still missing.
 2. Projects: first card is "Sport Cycle — Soon" (tag "Sport data", no link yet) — a teaser for a future project linking sport performance data with menstrual-cycle tracking, not started yet, placed first out of chronological order on purpose since it's upcoming. Once she starts it for real, give it a proper link/arrow. The NAR submission (circRNA sponging in melanoma resistance, in review) was deliberately removed from Projects rather than shown unlinked — once it's published, give it its own card with a real DOI link, modelled on the Cirscan card.
 
 ## Content rewrite (in progress, Oct 2026)

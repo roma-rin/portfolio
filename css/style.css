@@ -602,6 +602,10 @@ a:hover>.cp-diag{translate:2px -2px;color:var(--accent)}
  .cv-b .cp-b__mail{font-size:.88rem}
  .cv-b .cp-tags .tag{font-size:.74rem;padding:3px 10px}
 }
+/* Just above the mobile breakpoint: keep the 4 contact links on one line, a wrap would also enlarge the logo */
+@media (min-width:681px) and (max-width:800px){
+ .cv-b .cp-b__row{gap:var(--s1) var(--s3)}
+}
 @media (max-width:680px){.cv-b .cp-b__mail{overflow-wrap:normal;word-break:normal;font-size:.92rem;line-height:1.35}.cv-b .cp-b__mailrow{flex-direction:column;align-items:flex-start}}
 @media (max-width:680px){.cv-b .cp-copy{display:none}}
 @media (max-width:680px){.entry__main{flex-basis:100%;order:3}}

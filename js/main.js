@@ -218,7 +218,7 @@
     var href = a.getAttribute("href");
     if (/^(#|mailto:)/.test(href)) return;
     var label = (a.textContent.trim() || a.getAttribute("aria-label") || href).replace(/\s+/g, " ");
-    if (/^cv\//.test(href)) track("resume_opened", { section: sectionOf(a) });
+    if (/^resume\//.test(href)) track("resume_opened", { section: sectionOf(a) });
     track("link_clicked", { label: label, url: a.href, section: sectionOf(a) });
   });
 })();

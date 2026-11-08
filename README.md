@@ -14,5 +14,5 @@ The visual design and design system (colour palette, typography, card/section la
 - `js/main.js`: interactions, mobile menu, scroll spy, Background slider, News accordion, Paris clock, copy e-mail.
 - `font/`: Sonder (display font) and Hanken Grotesk (body font, fallback).
 - `img/`: portrait, logo, favicons, News photos.
-- `cv/`: the CV linked from the Contact section.
+- `resume/`: the resume (CV) linked from the Contact section.
 - `CLAUDE.md`, `.claude/`: project notes and a Claude Code skill, kept for whoever (human or Claude) picks this project back up.

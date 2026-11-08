@@ -174,4 +174,51 @@
     if (document.fonts) document.fonts.ready.then(cvFit);
     cvFit();
   }
+
+  /* ---- Analytics: custom PostHog events (no-op if PostHog is blocked) ---- */
+  function track(name, props) { if (window.posthog && posthog.capture) posthog.capture(name, props || {}); }
+  function sectionOf(el) { var s = el.closest("section[id]"); return s ? s.id : "other"; }
+
+  // Sections actually seen, once per page load: shows how far people read.
+  if ("IntersectionObserver" in window) {
+    var seenIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { track("section_viewed", { section: en.target.id }); seenIo.unobserve(en.target); }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll("main section[id]").forEach(function (s) { seenIo.observe(s); });
+  }
+
+  // News entry opened (only on open, not on close).
+  document.querySelectorAll(".entry__head").forEach(function (head) {
+    head.addEventListener("click", function () {
+      if (head.getAttribute("aria-expanded") !== "true") return;
+      var title = head.querySelector(".entry__title");
+      track("news_opened", { entry: head.getAttribute("aria-controls").replace(/^entry-/, ""), title: title ? title.textContent.trim() : "" });
+    });
+  });
+  if (more) more.addEventListener("click", function () { if (more.getAttribute("aria-expanded") === "true") track("older_news_opened"); });
+
+  // Background: other experiences revealed.
+  document.querySelectorAll(".has-sub .sl__toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (btn.getAttribute("aria-expanded") !== "true") return;
+      var role = btn.closest(".sl__panel").querySelector(".sl__face--main .sl__role");
+      track("background_expanded", { experience: role ? role.textContent.trim() : "" });
+    });
+  });
+
+  // E-mail copied or opened.
+  document.querySelectorAll(".cp-copy").forEach(function (b) { b.addEventListener("click", function () { track("email_copied"); }); });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.addEventListener("click", function () { track("email_clicked"); }); });
+
+  // Links leaving the page (CV, LinkedIn, GitHub, paper, posters...).
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[href]"); if (!a) return;
+    var href = a.getAttribute("href");
+    if (/^(#|mailto:)/.test(href)) return;
+    var label = (a.textContent.trim() || a.getAttribute("aria-label") || href).replace(/\s+/g, " ");
+    if (/^cv\//.test(href)) track("resume_opened", { section: sectionOf(a) });
+    track("link_clicked", { label: label, url: a.href, section: sectionOf(a) });
+  });
 })();

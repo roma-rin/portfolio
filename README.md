@@ -10,7 +10,7 @@ The visual design and design system (colour palette, typography, card/section la
 ## Structure
 - `index.html`: the page content.
 - `design-system.html`: a living style guide (colours, type, spacing, components, rules). Loads the real `css/` files, so it always matches the site (not part of the public site's navigation, kept for reference when extending the design).
-- `css/style.css`, `css/palettes.css`: all styles and colour tokens.
+- `css/style.css`: all styles, with the colour, type and spacing tokens at the top.
 - `js/main.js`: interactions, mobile menu, scroll spy, Background slider, News accordion, Paris clock, copy e-mail.
 - `font/`: Sonder (display font) and Hanken Grotesk (body font, fallback).
 - `img/`: portrait, logo, favicons, News photos.

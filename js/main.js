@@ -115,7 +115,7 @@
     prev.addEventListener("click", function () { setActive(active - 1, true); });
     next.addEventListener("click", function () { setActive(active + 1, true); });
     steps.forEach(function (st, k) { st.addEventListener("click", function () { setActive(k, true); }); });
-    panels.forEach(function (p, k) { p.addEventListener("click", function (e) { if (!e.target.closest("a") && !track.classList.contains("is-drag")) setActive(k, true); }); });
+    panels.forEach(function (p, k) { p.addEventListener("click", function (e) { if (!e.target.closest("a")) setActive(k, true); }); });
     track.addEventListener("keydown", function (e) {
       if (e.key === "ArrowRight") { e.preventDefault(); setActive(active + 1, true); }
       if (e.key === "ArrowLeft") { e.preventDefault(); setActive(active - 1, true); }

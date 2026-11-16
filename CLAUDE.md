@@ -50,3 +50,5 @@ Rules for the site's text (ask before deviating):
 
 ## Deploy
 `.github/workflows/build.yml` builds the `Dockerfile` (nginx + site) on each push to `main` and pushes `ghcr.io/roma-rin/portfolio` tagged `latest` and with the commit sha. The package must stay public so the hosting server can pull it without credentials. The workflow builds only, it does not deploy. The `Dockerfile` copies an explicit file list: never copy the repo root, which holds the git-ignored `.env` with PostHog secret keys. A new top-level site folder must be added to that list. Do not push or deploy without being asked; the user handles git pushes themselves.
+
+Caching: Cloudflare and browsers keep `css/` and `js/` files for 4 hours (`max-age=14400`), while `index.html` is never cached. Whenever `css/style.css` or `js/main.js` changes, bump the `?v=` query on its link in `index.html`, or visitors get the new page with the old stylesheet/script.

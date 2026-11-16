@@ -5,14 +5,14 @@ Single-page site, plain HTML/CSS/JS, no build step, no framework. Open `index.ht
 ## Files
 - `index.html` — one page: About, Background, Projects, News, Contact, footer.
 - `design-system.html` — living style guide (colours, type, spacing, components, rules). Loads the real `css/style.css`/`css/palettes.css`, so it reflects the site as implemented rather than the original handoff — update its prose when a layout rule changes (e.g. the Contact component note), not just the site.
-- `css/style.css` — all styles (dark theme only). `css/palettes.css` — colour tokens, palette `p4` (Bordeaux) selected via `<html data-palette="p4" data-theme="dark">`.
+- `css/style.css` — all styles. `css/palettes.css` — colour tokens, palette `p4` (Bordeaux). The site has a single dark look: no light theme, no theme switch. `<html data-palette="p4" data-theme="dark">` is only there because the CSS selectors expect these attributes.
 - `js/main.js` — mobile menu, scroll spy, Background slider (arrows/progress line/sub-experience reveal), News accordion + "Older news", Paris clock, copy e-mail, back-to-top, contact-logo height fit, custom PostHog events (`section_viewed`, `news_opened`, `older_news_opened`, `background_expanded`, `email_copied`, `email_clicked`, `resume_opened`, `link_clicked`). These feed the "Portfolio overview" dashboard, which exists identically in Portfolio-dev and Portfolio-prod: rename an event in both the code and the dashboards. Both projects have "Discard client IP data" on; GeoIP country/city still works with it.
 - `font/` — Sonder (display) + Hanken Grotesk fallback (`.woff2` only — don't reintroduce `.otf`, nothing loads them).
 - `img/` — portrait, logo, favicons, News photos. Strip EXIF/GPS metadata from any new photo before committing it.
 - `resume/` — the resume (CV) PDF linked from Contact (link label "Resume").
 
 ## Design rules (keep them)
-- Dark only. Background `#2d1520` with a slow warm glow; text cream `#f8f5e9`; accent orange `#f39118`; gold `#f0b952`; mauve `#977881`; bordeaux `#8c1632`.
+- Colours: background `#2d1520` with a slow warm glow; text cream `#f8f5e9`; accent orange `#f39118`; gold `#f0b952`; mauve `#977881`; bordeaux `#8c1632`.
 - Titles in Sonder, orange, ending with a white dot: "I'm Rose.", "Where I've worked and studied.", "Where we can talk."
 - Body in Hanken Grotesk. Meta lines (places, dates) in muted mauve.
 - One card shape everywhere (rounded rectangles, same height in Background and Projects). Only the arrow inside a card is clickable: down arrow = reveal, diagonal arrow = external link.

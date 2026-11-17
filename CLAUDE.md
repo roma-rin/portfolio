@@ -7,7 +7,7 @@ Single-page site, plain HTML/CSS/JS, no build step, no framework. Open `index.ht
 - `design-system.html` — living style guide (colours, type, spacing, components, rules). Loads the real `css/style.css`, so it reflects the site as implemented rather than the original handoff — update its prose when a layout rule changes (e.g. the Contact component note), not just the site.
 - `css/style.css` — all styles, starting with one `:root` block of tokens (Bordeaux palette). The site has a single dark look: no light theme, no theme switch, no palette switch.
 - `js/main.js` — mobile menu, scroll spy, Background slider (arrows/progress line/sub-experience reveal), News accordion + "Older news", Paris clock, copy e-mail, back-to-top, contact-logo height fit, custom PostHog events (`section_viewed`, `news_opened`, `older_news_opened`, `background_expanded`, `email_copied`, `email_clicked`, `resume_opened`, `link_clicked`). These feed the "Portfolio overview" dashboard, which exists identically in Portfolio-dev and Portfolio-prod: rename an event in both the code and the dashboards. Both projects have "Discard client IP data" on; GeoIP country/city still works with it.
-- `font/` — Sonder (display) + Hanken Grotesk fallback (`.woff2` only — don't reintroduce `.otf`, nothing loads them).
+- `font/` — Sonder (display) + Hanken Grotesk fallback, `.woff2` files.
 - `img/` — portrait, logo, favicons, News photos. Strip EXIF/GPS metadata from any new photo before committing it.
 - `resume/` — the resume (CV) PDF linked from Contact (link label "Resume").
 
@@ -44,9 +44,8 @@ Rules for the site's text (ask before deviating):
 - Tone: plain and direct over "literary". Vary sentence openings rather than starting with "I'm".
 - News entry titles: never repeat the entry's own tag word in the title (e.g. not "Poster at JOBIM 2022" when the tag already says "Poster" — just "JOBIM 2022"; not "PhD defense" next to tag "PhD" — retitled "Thesis defense"). Apply this to any new entry too.
 - Contact links to `resume/resume_rose-marie_fraboulet.pdf`, the public version of the resume (no phone number): replace it whenever the resume changes. Title and `og:title` are "Rose-Marie Fraboulet • Portfolio" (same name as the banner and resume). There is deliberately no `description` nor `og:description`: WhatsApp cut it mid-sentence (it falls back to `description` if `og:description` is missing, so both are gone).
-- Background: Teaching is two separate posts, 2022 (Master, Paris) and 2023 (Bachelor, Rennes); the M1 internship 2020 (Ligue Nationale Contre le Cancer, remote, pancreatic cancer scRNA-seq) and M2 internship 2021 (IGDR/GEO team, melanoma RNA signatures) are sub-experiences of the MSc card. The site's code link is `github.com/roma-rin/portfolio`.
-- News: JOBIM 2021/2022/2023 (posters/talk, with "View my poster"/"View my slides" links reusing `.cp-diag` — see `.news-poster-link` in style.css), "My thesis in 180 seconds" (Ligue Nationale, Apr 2023, photo gallery + slides PDF), "Thesis defense" (Nov 28 2024, with the openagenda.com event link) and "Thesis prize" (2nd prize, Fondation Université de Rennes, Nov 21 **2025**, not 2024) with its own year-row.
-- `.entry__type` is `flex-direction:column` so a second tag (e.g. Stanford's "Mobility" + "Grant") stacks instead of overflowing the fixed 96px column — safe for single-tag entries too.
+- The site's code link is `github.com/roma-rin/portfolio`.
+- News: the "Thesis prize" (2nd prize, Fondation Université de Rennes) is dated Nov 21 **2025**, not 2024, with its own year-row.
 
 ## Deploy
 `.github/workflows/build.yml` builds the `Dockerfile` (nginx + site) on each push to `main` and pushes `ghcr.io/roma-rin/portfolio` tagged `latest` and with the commit sha. The package must stay public so the hosting server can pull it without credentials. The workflow builds only, it does not deploy. The `Dockerfile` copies an explicit file list: never copy the repo root, which holds the git-ignored `.env` with PostHog secret keys. A new top-level site folder must be added to that list. Do not push or deploy without being asked; the user handles git pushes themselves.
